@@ -1,0 +1,326 @@
+extends _layout.pug
+
+block var
+	- var title = 'Việc làm'
+
+block main
+	section.vl-form
+		.container
+			form.banner-lc_search
+				input.banner-lc_search--input(
+					name="query"
+					type="text"
+					data-role="input"
+					placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty"
+					data-prepend="<span class='mdi mdi-magnify'></span>"
+					data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
+				select.banner-lc_search--select(
+					name="dia-diem"
+					data-role="select"
+					data-duration="0")
+					option(value="all") Tất cả địa điểm
+					option(value="brvt") Bà Rịa - Vũng Tàu
+					option(value="hn") Hà Nội
+					option(value="hcm") Hồ Chí Minh
+				button(type="submit").button.banner-lc_search--button Tìm kiếm
+	section.vl-sort_wrapper.container
+		.row
+			.col-lg-9.vl-sort.mt-6
+				h5.vl-sort_title.text-bold.m-0 Lập trình viên
+					span.vl-sort_count.text-secondary.text-bold.ml-2 1,962
+				a.vl-sort_btn--newest(onClick="$('#vieclam_list').data('list').sorting('vl-list_posted', 'desc', true)") Tin mới nhất
+				select.vl-sort_select.no-user-select(
+					data-role="select"
+					data-filter="false"
+					data-duration="0"
+					data-on-change="$('#vieclam_list').data('list').sorting('job-luong', this.value, true)"
+					)
+					option(
+						value="asc"
+						data-template="<span class='mdi mdi-sort-ascending'></span> $1") Mức lương tăng dần
+					option(
+						value="desc"
+						data-template="<span class='mdi mdi-sort-descending'></span> $1") Mức lương giảm dần
+	section.vl-list_wrapper.container
+		.row.flex-wrap-r.flex-wrap-lg
+			.col-lg-9
+				ul#vieclam_list.vl-list.unstyled-list.mr-0(
+					data-role="list"
+					data-show-pagination="true"
+					data-items="8"
+					data-show-list-info="true"
+					data-list-info-title="Hiển thị $1 đến $2 trong $3 việc làm"
+					data-pagination-prev-title="Quay lại"
+					data-pagination-next-title="Kế tiếp"
+					data-activity-type="simple"
+					data-activity-style="dark"
+					data-cls-list-bottom="vl-list_bottom"
+					data-cls-list-info="vl-list_info"
+					data-cls-list-pagination="vl-list_pagination"
+					)
+					-for(var i = 0; i < 100; i++)
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
+									.job-box_subtitle.text-small
+										a(href="#" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
+									.d-flex
+										.job-luong.text-small.text-bold 21 ~ 30tr VNĐ
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 28/02/2020
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+									.job-box_subtitle.text-small
+										a(href="#" title="Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+									.d-flex
+										.job-luong.text-small.text-bold 08 ~ 12Tr VNĐ
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Quận 3, Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 29/02/2020
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
+									.job-box_subtitle.text-small
+										a(href="#" title="Nexon-Networks VINA") Nexon-Networks VINA
+									.d-flex
+										.job-luong.text-small.text-bold 15 ~ 20Tr VNĐ
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Quận 5, Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 28/02/2020
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+									.job-box_subtitle.text-small
+										a(href="#" title="Công Ty Cổ Phần Vinhomes") Công Ty Cổ Phần Vinhomes
+									.d-flex
+										.job-luong.text-small.text-bold Thương lượng
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Quận Bình Thạnh, Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 27/02/2020
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
+									.job-box_subtitle.text-small
+										a(href="#" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
+									.d-flex
+										.job-luong.text-small.text-bold 25 ~ 35tr VNĐ
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 21/02/2020
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+									.job-box_subtitle.text-small
+										a(href="#" title="Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+									.d-flex
+										.job-luong.text-small.text-bold 05 ~ 10Tr VNĐ
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Quận 3, Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 22/02/2020
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
+									.job-box_subtitle.text-small
+										a(href="#" title="Nexon-Networks VINA") Nexon-Networks VINA
+									.d-flex
+										.job-luong.text-small.text-bold 18 ~ 21Tr VNĐ
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Hà Nội
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 23/02/2020
+						li
+							article.vl-list_box.job-box
+								.img
+									a(href="#")
+										img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+								.info
+									.job-box_title.text-bold
+										a(href="#" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+									.job-box_subtitle.text-small
+										a(href="#" title="Công Ty Cổ Phần Vinhomes") Công Ty Cổ Phần Vinhomes
+									.d-flex
+										.job-luong.text-small.text-bold 12 ~ 17tr VNĐ
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Quận Bình Thạnh, Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu việc làm").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline
+									.vl-list_posted.text-secondary
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 24/02/2020
+			.col-lg-3.mt-4.pl-4-lg
+				.vl-company.mb-4
+					.vl-company_title CÔNG TY NỔI BẬT
+					.swiper-container
+						.swiper-wrapper
+							-for(var i = 0; i < 3; i++)
+								.swiper-slide
+									.vl-company_box
+										.vl-company_image
+											a(href="#company_headline").vl-company_headline
+													img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg-development")
+											a(href="#company_logo").vl-company_logo
+												img(src="img/nha-tuyen-dung/lg.png", alt="lg-company")
+										.vl-company_name.mb-1
+											a(href="#company_name") LG Development Center Vietnam
+										.vl-company_location.text-secondary.text-center.mb-4 Hồ Chí Minh
+										ul.vl-company_job.m-0
+											li.vl-company_job--item
+												.text-bold
+													a(href="#") Android Developer (Up to $2,000)
+												.d-flex.text-small
+													.job-luong.text-bold
+														span.mdi.mdi-currency-usd
+														span 13tr trở lên
+													.ml-4
+														span.mdi.mdi-clock-check-outline
+														span.ml-1 02/03/2010
+											li.vl-company_job--item
+												.text-bold
+													a(href="#") C/C++ Software Engineer
+												.d-flex.text-small
+													.job-luong.text-bold
+														span.mdi.mdi-currency-usd
+														span 13tr ~ 20tr VNĐ
+													.ml-4
+														span.mdi.mdi-clock-check-outline
+														span.ml-1 02/03/2010
+						.vl-company_pagination.text-center.mt-1
+				.vl-tree
+					.vl-tree_item
+						.vl-tree_title.active-toggle#vl-tree1
+							span.text-bold địa điểm
+							span.mdi.mdi-plus-circle-outline
+						.vl-tree_content(
+							data-role="collapse"
+							data-toggle-element="#vl-tree1"
+						)
+							button.vl-tree_btn--removeFilter
+								span reset filters
+							ul.vl-tree_list.dia-diem.unstyled-list.m-0
+								li
+									input(
+										type="radio"
+										name="vl_diadiem"
+										data-role="radio"
+										data-style="2"
+										data-caption="Hồ Chí Minh"
+										value="Hồ Chí Minh"
+										)
+								li
+									input(
+										type="radio"
+										name="vl_diadiem"
+										data-role="radio"
+										data-style="2"
+										data-caption="Hà Nội"
+										value="Hà Nội"
+										)
+								li
+									input(
+										type="radio"
+										name="vl_diadiem"
+										data-role="radio"
+										data-style="2"
+										data-caption="Bà Rịa - Vũng Tàu"
+										value="Bà Rịa - Vũng Tàu"
+										)
+								li
+									input(
+										type="radio"
+										name="vl_diadiem"
+										data-role="radio"
+										data-style="2"
+										data-caption="Bình Dương"
+										value="Bình Dương"
+										)
+								li
+									input(
+										type="radio"
+										name="vl_diadiem"
+										data-role="radio"
+										data-style="2"
+										data-caption="Đồng Nai"
+										value="Đồng Nai"
+										)
+							div.text-center.text-secondary
+								a(href="#").vl-tree_btn--more Xem thêm

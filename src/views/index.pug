@@ -1,0 +1,275 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+
+block main
+	section.banner-lc
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					img(src="img/banner-1.jpg" alt="banner-1.jpg").background
+					img(src="img/banner-1.jpg" alt="banner-1.jpg")
+				.swiper-slide
+					img(src="img/banner-2.jpg" alt="banner-2.jpg").background
+					img(src="img/banner-2.jpg" alt="banner-2.jpg")
+			.swiper-pagination
+		.container.banner-container
+			.row
+				.banner-lc_title
+					p Tuyển Nhân Sự Chất Lượng Cao - Mọi Lĩnh Vực
+				.banner-lc_subtitle
+					p Đáp ứng mọi nhu cầu tuyển dụng nhân sự Fulltime & Freelancer.
+					p Kết nối nhanh chóng - Đúng người, đúng việc
+			.row
+				form.banner-lc_search
+					input.banner-lc_search--input(
+						name="query"
+						type="text"
+						data-role="input"
+						placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty,..."
+						data-prepend="<span class='mdi mdi-magnify'></span>"
+						data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
+					select.banner-lc_search--select(
+						name="dia-diem"
+						data-role="select"
+						data-duration="0")
+						option(value="all") Tất cả địa điểm
+						option(value="brvt") Bà Rịa - Vũng Tàu
+						option(value="hn") Hà Nội
+						option(value="hcm") Hồ Chí Minh
+					button(type="submit").button.banner-lc_search--button Tìm ngay
+				.banner-lc_search--recent
+					.recent
+						.title TÌM KIẾM GẦN ĐÂY
+						.content
+							.item
+								span
+									a(href="#recent") brand manager brand manager brand manager
+								span (47 việc làm)
+							.item
+								span
+									a(href="#recent") brand manager brand manager brand manager
+								span (47 việc làm)
+					.recommend
+						.title TỪ KHÓA PHỔ BIẾN
+						.content
+							a(href="#recent").item
+								span brand manager
+								span (Bán hàng)
+							a(href="#recent").item
+								span Giám sát bán hàng
+								span (Bán hàng)
+							a(href="#recent").item
+								span Account Executive
+								span (Marketing)
+							a(href="#recent").item
+								span Kết toán tổng hợp
+								span (Ngân hàng)
+							a(href="#recent").item
+								span Project manager
+								span (IT - Phần mềm)
+							a(href="#recent").item
+								span Fronent developer
+								span (IT - Phần mềm)
+	section.company.tieubieu.mb-6
+		.container
+			h2.text-center.mt-10 Nhà tuyển dụng nổi bật
+			.row.flex-justify-center
+				.col-sm-4.col-md-3.col-xl-2
+					figure.company-box
+						a(href="#").img
+							.ribbon.ribbon-top-right
+								span top
+							img(src='img/nha-tuyen-dung/nashtech.jpg' alt='img/nha-tuyen-dung/nashtech.jpg')
+						figcaption.mt-3.text-center
+							a(href="#nhatuyendung") Nash Tech
+				.col-sm-4.col-md-3.col-xl-2
+					figure.company-box.mx-auto
+						a(href="#").img
+							img(src='img/nha-tuyen-dung/toshiba-software-development-viet-nam-co-ltd-logo.png' alt='img/nha-tuyen-dung/toshiba-software-development-viet-nam-co-ltd-logo.png')
+						figcaption.mt-3.text-center
+							a(href="#nhatuyendung") Toshiba
+				.col-sm-4.col-md-3.col-xl-2
+					figure.company-box.mx-auto
+						a(href="#").img
+							.ribbon.ribbon-top-right
+								span top
+							img(src='img/nha-tuyen-dung/fpt-software-logo.png' alt='img/nha-tuyen-dung/fpt-software-logo.png')
+						figcaption.mt-3.text-center
+							a(href="#nhatuyendung") FPT Software
+				.col-sm-4.col-md-3.col-xl-2
+					figure.company-box.mx-auto
+						a(href="#").img
+							img(src='img/nha-tuyen-dung/Hybrid-Technologies-LogoSuite_-fullcolor-(square).png' alt='img/nha-tuyen-dung/Hybrid-Technologies-LogoSuite_-fullcolor-(square).png')
+						figcaption.mt-3.text-center
+							a(href="#nhatuyendung") Hybrid Technologies
+				.col-sm-4.col-md-3.col-xl-2
+					figure.company-box.mx-auto
+						a(href="#").img
+							img(src='img/nha-tuyen-dung/panasonic-vietnam-group-logo.png' alt='img/nha-tuyen-dung/panasonic-vietnam-group-logo.png')
+						figcaption.mt-3.text-center
+							a(href="#nhatuyendung") Panasonic
+				.col-sm-4.col-md-3.col-xl-2
+					figure.company-box.mx-auto
+						a(href="#").img
+							img(src='img/nha-tuyen-dung/beckers.jpg' alt='img/nha-tuyen-dung/beckers.jpg')
+						figcaption.mt-3.text-center
+							a(href="#nhatuyendung") Beckers
+	section.job.totnhat.mb-6
+		.container
+			h2.job-title.text-center.mt-10 Việc làm tốt nhất
+			.row
+				.col-lg-8
+					.swiper-container
+						.swiper-wrapper
+							-for(var j = 0; j < 3; j++)
+								.swiper-slide
+										ul.job-list.unstyled-list
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+													.info
+														.job-box_title.text-bold
+															a(href="#") Accounting Officer (Aeonmall Tân Phú)
+														.job-box_subtitle.text-small
+															a(href="#") AEONMALL Vietnam Co., Ltd
+														.job-luong.text-small.text-bold Thương lượng
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+													.info
+														.job-box_title.text-bold
+															a(href="#") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+														.job-box_subtitle.text-small
+															a(href="#") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+													.info
+														.job-box_title.text-bold
+															a(href="#") HR Specialist (Recruitment, C&B)
+														.job-box_subtitle.text-small
+															a(href="#") Nexon-Networks VINA
+														.job-luong.text-small.text-bold 15 ~ 20Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+													.info
+														.job-box_title.text-bold
+															a(href="#") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+														.job-box_subtitle.text-small
+															a(href="#") Công Ty Cổ Phần Vinhomes
+														.job-luong.text-small.text-bold Thương lượng
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+													.info
+														.job-box_title.text-bold
+															a(href="#") Accounting Officer (Aeonmall Tân Phú)
+														.job-box_subtitle.text-small
+															a(href="#") AEONMALL Vietnam Co., Ltd
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+													.info
+														.job-box_title.text-bold
+															a(href="#") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+														.job-box_subtitle.text-small
+															a(href="#") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+													.info
+														.job-box_title.text-bold
+															a(href="#") HR Specialist (Recruitment, C&B)
+														.job-box_subtitle.text-small
+															a(href="#") Nexon-Networks VINA
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="#")
+															img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+													.info
+														.job-box_title.text-bold
+															a(href="#") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+														.job-box_subtitle.text-small
+															a(href="#") Công Ty Cổ Phần Vinhomes
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+						.job-pagination
+				.col-lg-4.pl-8-lg
+					.job.recommend
+						h6.job-title.text-center.m-0.py-3 Phù hợp với bạn
+						ul.job-list2.unstyled-list
+							-for(var i = 0; i < 4; i++)
+								li
+									article.job-box
+										.img
+											a(href="#")
+												img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+										.info
+											.job-box_title.text-bold
+												a(href="#") Accounting Officer (Aeonmall Tân Phú)
+											.job-box_subtitle.text-small
+												a(href="#") AEONMALL Vietnam Co., Ltd
+											.d-flex
+												.job-luong.text-small.text-bold Thương lượng
+												.job-diadiem.text-small.ml-4
+													span.mdi.mdi-map-marker.pos-absolute
+													span.ml-4 Hồ Chí Minh
+						.text-center.pb-2
+							a(href="#").job-xemthem Xem thêm
+	section.job.banner.mb-6
+		.container
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						a(href="#")
+							img(src="img/banner-CocCoc.webp", alt="banner-CocCoc.webp")
+					.swiper-slide
+						a(href="#")
+							img(src="img/banner-3.jpg", alt="banner-3.jpg")
+			.job-btn_prev.mdi.mdi-chevron-left
+			.job-btn_next.mdi.mdi-chevron-right

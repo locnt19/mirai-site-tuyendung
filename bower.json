@@ -1,0 +1,24 @@
+{
+  "name": "gulp-pug-sass",
+  "description": "Front end build tool using Gulp, Pug, Sass",
+  "main": "gulpfile.js",
+  "authors": [
+    "Loc Thanh | locnt19@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/locnt19/gulp-pug-sass.git",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "swiper": "^5.3.6",
+    "jquery": "^3.4.1",
+    "mdi": "^4.9.95",
+    "metro": "^4.3.5"
+  }
+}

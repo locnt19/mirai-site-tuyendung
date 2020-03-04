@@ -1,0 +1,21 @@
+block var
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel="stylesheet", href="./css/global.min.css")
+		link(rel="stylesheet", href="./css/main.min.css")
+		title #{title}
+	body
+		block header
+			include ../components/header/index.pug
+		main
+			block main
+		block footer
+			include ../components/footer/index.pug
+		script(src="./js/global.min.js")
+		script(src="./js/main.min.js")
+		block script

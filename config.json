@@ -1,0 +1,16 @@
+{
+	"font": [
+		"bower_components/mdi/fonts/*"
+	],
+	"globalJs": [
+		"bower_components/jquery/dist/jquery.min.js",
+		"bower_components/metro/build/js/metro.min.js",
+		"bower_components/swiper/package/js/swiper.min.js"
+	],
+	"globalCss": [
+		"bower_components/metro/build/css/metro-all.min.css",
+		"bower_components/swiper/package/css/swiper.min.css",
+		"bower_components/mdi/css/materialdesignicons.min.css",
+		"src/components/stylesheet/fonts.css"
+	]
+}

@@ -1,0 +1,37 @@
+extends _layout.pug
+
+block var
+	- var title = 'Không tìm thấy việc làm'
+
+block main
+	section.vl-form
+		.container
+			form.banner-lc_search
+				input.banner-lc_search--input(
+					name="query"
+					type="text"
+					data-role="input"
+					placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty"
+					data-prepend="<span class='mdi mdi-magnify'></span>"
+					data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
+				select.banner-lc_search--select(
+					name="dia-diem"
+					data-role="select"
+					data-duration="0")
+					option(value="all") Tất cả địa điểm
+					option(value="brvt") Bà Rịa - Vũng Tàu
+					option(value="hn") Hà Nội
+					option(value="hcm") Hồ Chí Minh
+				button(type="submit").button.banner-lc_search--button Tìm kiếm
+	section.vl-sort_wrapper.container
+		.vl-sort_notfound.mt-10
+			p.color_red
+				span Không tìm thấy việc làm phù hợp với 
+				span.text-bold Frontend Developer
+			p.text-bold Gợi ý tìm việc:
+			p • Tìm kiếm việc làm với từ khóa như vị trí công việc. Ví dụ: Nhân viên kinh doanh hoặc Kế toán viên ...
+			p • Xem việc làm theo ngành nghề 
+				a(href="#") Click để xem »
+			p • Xem 
+				a(href="#") việc làm mới cập nhật
+				span , kết hợp với chọn thêm tỉnh / thành phố.
