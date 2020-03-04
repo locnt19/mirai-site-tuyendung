@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	// all script write here
+	BackToTop();
 	SlideSwiper();
 	ToggleUserNav();
 	ShowHideSearchRecent();
@@ -7,6 +8,19 @@ $(document).ready(function () {
 	ResetFilterListViecLam();
 	ViewMoreViecLamTree();
 });
+
+function BackToTop() {
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.b2t').fadeIn()
+		} else $('.b2t').fadeOut()
+	})
+	$('.b2t').click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	})
+}
 
 function ToggleUserNav() {
 	$('.user-nav_hamburger').click(function () {
