@@ -758,6 +758,7 @@ main
 				width: 100%
 		&_logo
 			flex: 0 0 150px
+			max-width: 150px
 			height: 150px
 			padding: 4px
 			border-radius: 4px
@@ -776,8 +777,10 @@ main
 			font-weight: 700
 		&_actions
 			button
+				margin: 8px
+				margin-bottom: 0
 				+ button
-					margin-top: 16px
+					margin-top: 8px
 	&-btn
 		&_ungtuyen,
 		&_luu
@@ -815,3 +818,28 @@ main
 		.title
 			font-weight: 700
 			font-size: 24px
+	@media screen and ( max-width: 991.98px )
+		&-company
+			&_logo
+				flex: 0 0 100px
+				max-width: 100px
+				height: 100px
+			&_title
+				font-size: 24px
+	@media screen and ( max-width: 767.98px )
+		&-company
+			&_box
+				flex-direction: column
+			&_logo
+				flex: 0 0 150px
+				max-width: 150px
+				height: 150px
+			&_info
+				margin-top: 16px
+				margin-left: 0
+			&_actions
+				margin-top: 8px
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-wrap: wrap
