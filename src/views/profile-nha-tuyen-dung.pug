@@ -1,0 +1,177 @@
+extends _layout.pug
+
+block var
+	- var title = 'profile nhà tuyển dụng'
+
+block main
+	section.container.mt-6.p-0-sm
+		.ctvl-company_headline
+			img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg")
+	section.container.mt-6.p-0-sm
+		.ctvl-company_box.d-flex.flex-align-center.p-4
+			.ctvl-company_logo.d-flex.flex-align-center.flex-justify-center
+				img(src="img/nha-tuyen-dung/lg.png", alt="lg")
+			.ctvl-company_info
+				h1.ctvl-company_title.mb-2 LG Electronics Vietnam
+				p.mt-0
+					span.h6.m-0.mdi.mdi-pound
+					span.ml-3 CNTT / Phần mềm
+				p.mt-0
+					span.h6.m-0.mdi.mdi-account-group-outline
+					span.ml-3 1 - 100
+				p.mt-0
+					span.h6.m-0.mdi.mdi-map-marker-outline
+					span.ml-3 Quận 9, Hồ Chí Minh
+				p.mt-0
+					span.h6.m-0.mdi.mdi-calendar-clock
+					span.ml-3 Thứ 2 - Thứ 6
+			.ctvl-company_actions
+				button.ctvl-btn_ungtuyen#btn-danhgia Đánh giá
+				button.ctvl-btn_luu
+					span.mdi.mdi-heart-outline.mr-1
+					span Theo dõi
+	section.profile.tuyendung.container.mt-4.mb-6.p-0-sm
+		.row
+			.col-lg-8
+				.profile-item
+					.profile-title Giới thiệu công ty
+					.profile-content.p-4.mt-3
+						p(style="font-weight: 700; font-size: 24px") LG Vehicle Component Solutions Development Center Vietnam
+						p With the advent of the Smart Car era, LG hopes to become an innovative partner in vehicle electrification through development of advanced technology components. Vehicle Component Solutions Company (VS) is developing a wide variety of highly competitive products. Our products include In Vehicle Infotainment system such as Telematics, AV Navigation, Display Audio, Integrated Display System, and Advanced Driver Assistant System (ADAS) called ‘intelligent safe’, and other convenient devices. Our company is also focusing on vehicle engineering, to include Powertrain, electronic vehicle Battery Packs, etc. and is providing them to major customers in the world-wide vehicle industry.
+						p We offer an environment that enables colleagues to demonstrate their capabilities, focus on their work and create value.
+				.profile-item
+					.profile-title 19 Đánh giá
+					.profile-content.p-4.mt-3
+						ul.unstyled-list.m-0(
+							data-role="list"
+							data-items="3"
+							data-sort-dir="desc"
+							data-sort-class="posted"
+							data-show-pagination="true"
+							data-pagination-prev-title="Quay lại"
+							data-pagination-next-title="Kế tiếp"
+							data-activity-type="simple"
+							data-activity-style="dark"
+							data-cls-list-bottom="vl-list_bottom"
+							data-cls-list-info="vl-list_info"
+							data-cls-list-pagination="vl-list_pagination"
+							)
+							-for(var i = 0; i < 3; i++)
+								li
+									.profile-review_box
+										.profile-review_title Môi trường làm việc hiện đại, thân thiện
+										.profile-review_stars
+											input(
+												data-role="rating"
+												data-stars="5"
+												data-value="5"
+												data-static="true"
+												data-stared-color="cyan")
+											p.text-small.m-0
+												span.mdi.mdi-clock-outline.mr-1
+												span.posted 01/03/2020
+										.profile-review_content
+											p - Có lap + màn hình to --&gt; làm việc thoải mái, chỗ ngồi rộng rãi.
+												br
+												| - Nhiều hoạt động nội bộ, nhiều chương trình cho nhân viên vui chơi
+												br
+												| - Sếp Hàn khá thân thiện
+												br
+												| - Cơ chế OT rõ ràng
+												br
+												| - Có cơ chế OT rõ ràng, đầy đủ, có voucher ăn tối nếu làm sau 9h.
+								li
+									.profile-review_box
+										.profile-review_title Đãi ngộ tốt, môi trường trẻ trung. Rất ổn với fresher mới ra trường.
+										.profile-review_stars
+											input(
+												data-role="rating"
+												data-stars="5"
+												data-value="4"
+												data-static="true"
+												data-stared-color="cyan")
+											p.text-small.m-0
+												span.mdi.mdi-clock-outline.mr-1
+												span.posted 02/03/2020
+										.profile-review_content
+											p Các benefit khá ổn. Công việc ổn định, làm việc với KH nước ngoài (Mỹ, Đức, Hàn, Trung). Sếp thoải mái, tâm lý. Có budget ăn uống, chơi bời hàng tháng. Event cũng khá hay ho (Men's day, Thi ăn kem, Xem phim).
+												br
+												| Được tính lương OT theo luật, có voucher ăn tối nếu OT muộn
+												br
+												| Thang máy buổi sáng đông, chen chúc. Tùy thời điểm phải OT thường xuyên.
+								li
+									.profile-review_box
+										.profile-review_title Khá hài lòng với môi trường làm việc ở đây
+										.profile-review_stars
+											input(
+												data-role="rating"
+												data-stars="5"
+												data-value="5"
+												data-static="true"
+												data-stared-color="cyan")
+											p.text-small.m-0
+												span.mdi.mdi-clock-outline.mr-1
+												span.posted 03/03/2020
+										.profile-review_content
+											p Công ty khá nhiều Benefit cho nhân viên. Hỗ trợ ăn trưa, Team building, ice cream, nhiều hoạt động khích lệ tinh thần làm việc
+												br
+												| Chế độ OT tốt, từ nhân viên đến TL đều được trả lương OT.
+			.col-lg-4.pl-4-lg
+				.profile-title#danhgia Đánh giá
+				.profile-content.text-center.p-4.mt-3
+					form(action="javascript:void(0)", method="post")
+						p.mt-4
+							span Hiện chưa có đánh giá nào.
+							br
+							span Hãy là người đầu tiên đưa ra đánh giá
+						p
+							input(
+								name="star"
+								data-role="rating"
+								data-stars="5"
+								data-star-color="cyan"
+								data-stared-color="cyan"
+								data-cls-stars="profile-stars"
+								)
+						p
+							input(
+								name="title"
+								placeholder="Tiêu đề đánh giá"
+								type="text"
+							)
+							textarea.mt-3(
+								name="content"
+								placeholder="Nội dung đánh giá"
+								data-role="textarea"
+								cols="30"
+								rows="10"
+								)
+						p
+							button.ctvl-btn_ungtuyen.mx-auto Đánh giá ngay
+				.job.recommend.mt-8.mt-10-lg
+					h6.job-title.text-center.m-0.py-3 Đang tuyển dụng
+					ul.job-list2.unstyled-list.px-2.pb-2
+						-for(var i = 0; i < 8; i++)
+							li
+								article.job-box
+									.img
+										a(href="#")
+											img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+									.info
+										.job-box_title.text-bold
+											a(href="#") Accounting Officer (Aeonmall Tân Phú)
+										.job-box_subtitle.text-small
+											a(href="#") AEONMALL Vietnam Co., Ltd
+										.d-flex
+											.job-luong.text-small.text-bold Thương lượng
+											.job-diadiem.text-small.ml-4
+												span.mdi.mdi-map-marker.pos-absolute
+												span.ml-4 Hồ Chí Minh
+block script
+	script.
+		$('#btn-danhgia').click(function(){
+			const position = $('#danhgia').offset().top - $('header').outerHeight();
+			$('html, body').animate({
+				scrollTop: position
+			}, 800);
+		})
