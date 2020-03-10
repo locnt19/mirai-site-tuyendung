@@ -152,7 +152,10 @@ main
 				&.login
 					a
 						color: #fff !important
-						background: #002660 !important
+						opacity: .85
+						background: #1877F2 !important
+						&:hover
+							opacity: 1
 				&.language
 					a
 						padding-right: 0
@@ -209,6 +212,110 @@ main
 				padding: 0
 				margin-bottom: 8px
 
+.login
+	&-infobox
+		border: none
+		max-width: calc(100vw - 50px)
+		max-height: calc(100vh - 50px)
+		.closer
+			width: 24px
+			height: 24px
+			border-radius: 99px
+			display: flex
+			align-items: center
+			justify-content: center
+			background: lighten(silver, 20)
+			color: #333
+			top: -12px
+			right: -12px
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, .35)
+			&::before
+				margin-top: 0
+		.tabs
+			li
+				flex: 1 0 0
+				a
+					box-shadow: inset 0 0 12px 0px rgba(0,0,0,.35)
+				&:hover,
+				&.active
+					a
+						box-shadow: none
+	&-input
+		&:focus,
+		&.focused
+			border-color: #007DC4 !important
+			box-shadow: 0 0 4px 0 rgba(#007DC4, .35) !important
+		&:hover
+			border-color: #007DC4 !important
+	&-btn
+		&_fb,
+		&_gg,
+		&_login,
+		&_register
+			flex: 1 0 0
+			height: 35px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 4px
+			border: none
+			opacity: 0.85
+			font-size: 24px
+			color: white !important
+			&:hover
+				opacity: 1
+		&_fb
+			background-color: #1877F2
+		&_gg
+			background-color: #E92D18
+		&_login,
+		&_register
+			width: 100%
+			font-size: 16px !important
+		&_login
+			background: #002660
+		&_register
+			background: #007DC4
+	&-line
+		position: relative
+		min-height: 24px
+		display: flex
+		align-items: center
+		justify-content: center
+		span
+			background: #fff
+			padding: 0 12px
+		&::before
+			content: ''
+			z-index: -1
+			display: block
+			width: 100%
+			height: 1px
+			background: silver
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	@media screen and ( min-width: 576px )
+		&-btn
+			&_fb,
+			&_gg,
+			&_login,
+			&_register
+				height: 45px
+				font-size: 28px
+			&_fb
+				font-size: 32px
+			&_login,
+			&_register
+				height: 40px
+		&-infobox
+			.tabs
+				li
+					flex: 1 0 0
+					a
+						padding: 16px !important
+
 .banner-lc
 	position: relative
 	// slide
@@ -226,13 +333,13 @@ main
 		padding: 32px 24px
 		background: rgba(0, 0, 0, .65)
 	&_title
-		color: #E6F4F1
+		color: #fff
 		text-shadow: 0 0 8px rgba(0, 0, 0, .5)
 		font-size: 28px
 		font-weight: 700
 		margin-bottom: 24px
 	&_subtitle
-		color: #E6F4F1
+		color: #fff
 		text-shadow: 0 0 8px rgba(0, 0, 0, .5)
 		font-size: 20px
 		line-height: 1.25

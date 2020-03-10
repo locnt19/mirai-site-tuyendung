@@ -42,10 +42,10 @@ function SlideSwiper() {
 	const banner_lc = new Swiper('.banner-lc .swiper-container', {
 		effect: 'fade',
 		loop: true,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		speed: 1500,
 		pagination: {
 			el: '.swiper-pagination',
