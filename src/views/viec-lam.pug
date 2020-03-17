@@ -4,6 +4,10 @@ block var
 	- var title = 'Việc làm'
 
 block main
+	section.container.px-0-md
+		nav.breadcrumb.mt-4.mb-2
+			a.breadcrumb-step(href='index.html') Trang chủ
+			a.breadcrumb-step.breadcrumb-step_active(href='viec-lam.html') Việc làm
 	section.vl-form
 		.container
 			form.banner-lc_search
@@ -23,7 +27,7 @@ block main
 					option(value="hn") Hà Nội
 					option(value="hcm") Hồ Chí Minh
 				button(type="submit").button.banner-lc_search--button Tìm kiếm
-	section.vl-sort_wrapper.container
+	section.vl-sort_wrapper.container.px-0-md
 		.row
 			.col-lg-9.vl-sort.mt-6
 				h5.vl-sort_title.text-bold.m-0 Lập trình viên
@@ -41,7 +45,7 @@ block main
 					option(
 						value="desc"
 						data-template="<span class='mdi mdi-sort-descending'></span> $1") Mức lương giảm dần
-	section.vl-list_wrapper.container
+	section.vl-list_wrapper.container.px-0-md
 		.row.flex-wrap-r.flex-wrap-lg
 			.col-lg-9
 				ul#vieclam_list.vl-list.unstyled-list.mr-0(
@@ -62,13 +66,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
+										a(href="chi-tiet-1-viec-lam.html" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
 									.job-box_subtitle.text-small
-										a(href="#" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
+										a(href="profile-nha-tuyen-dung.html" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
 									.d-flex
 										.job-luong.text-small.text-bold 21 ~ 30tr VNĐ
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -83,13 +87,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+										a(href="chi-tiet-1-viec-lam.html" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
 									.job-box_subtitle.text-small
-										a(href="#" title="Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+										a(href="profile-nha-tuyen-dung.html" title="Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
 									.d-flex
 										.job-luong.text-small.text-bold 08 ~ 12Tr VNĐ
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -104,13 +108,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
+										a(href="chi-tiet-1-viec-lam.html" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
 									.job-box_subtitle.text-small
-										a(href="#" title="Nexon-Networks VINA") Nexon-Networks VINA
+										a(href="profile-nha-tuyen-dung.html" title="Nexon-Networks VINA") Nexon-Networks VINA
 									.d-flex
 										.job-luong.text-small.text-bold 15 ~ 20Tr VNĐ
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -125,13 +129,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+										a(href="chi-tiet-1-viec-lam.html" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
 									.job-box_subtitle.text-small
-										a(href="#" title="Công Ty Cổ Phần Vinhomes") Công Ty Cổ Phần Vinhomes
+										a(href="profile-nha-tuyen-dung.html" title="Công Ty Cổ Phần Vinhomes") Công Ty Cổ Phần Vinhomes
 									.d-flex
 										.job-luong.text-small.text-bold Thương lượng
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -146,13 +150,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
+										a(href="chi-tiet-1-viec-lam.html" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
 									.job-box_subtitle.text-small
-										a(href="#" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
+										a(href="profile-nha-tuyen-dung.html" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
 									.d-flex
 										.job-luong.text-small.text-bold 25 ~ 35tr VNĐ
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -167,13 +171,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+										a(href="chi-tiet-1-viec-lam.html" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
 									.job-box_subtitle.text-small
-										a(href="#" title="Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+										a(href="profile-nha-tuyen-dung.html" title="Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
 									.d-flex
 										.job-luong.text-small.text-bold 05 ~ 10Tr VNĐ
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -188,13 +192,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
+										a(href="chi-tiet-1-viec-lam.html" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
 									.job-box_subtitle.text-small
-										a(href="#" title="Nexon-Networks VINA") Nexon-Networks VINA
+										a(href="profile-nha-tuyen-dung.html" title="Nexon-Networks VINA") Nexon-Networks VINA
 									.d-flex
 										.job-luong.text-small.text-bold 18 ~ 21Tr VNĐ
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -209,13 +213,13 @@ block main
 						li
 							article.vl-list_box.job-box
 								.img
-									a(href="#")
+									a(href="profile-nha-tuyen-dung.html")
 										img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
 								.info
 									.job-box_title.text-bold
-										a(href="#" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+										a(href="chi-tiet-1-viec-lam.html" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
 									.job-box_subtitle.text-small
-										a(href="#" title="Công Ty Cổ Phần Vinhomes") Công Ty Cổ Phần Vinhomes
+										a(href="profile-nha-tuyen-dung.html" title="Công Ty Cổ Phần Vinhomes") Công Ty Cổ Phần Vinhomes
 									.d-flex
 										.job-luong.text-small.text-bold 12 ~ 17tr VNĐ
 										.job-diadiem.text-small.ml-4(title="Địa điểm")
@@ -236,17 +240,17 @@ block main
 								.swiper-slide
 									.vl-company_box
 										.vl-company_image
-											a(href="#company_headline").vl-company_headline
+											a(href="chi-tiet-1-viec-lam.html").vl-company_headline
 													img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg-development")
-											a(href="#company_logo").vl-company_logo
+											a(href="profile-nha-tuyen-dung.html").vl-company_logo
 												img(src="img/nha-tuyen-dung/lg.png", alt="lg-company")
 										.vl-company_name.mb-1
-											a(href="#company_name") LG Development Center Vietnam
+											a(href="profile-nha-tuyen-dung.html") LG Development Center Vietnam
 										.vl-company_location.text-secondary.text-center.mb-4 Hồ Chí Minh
 										ul.vl-company_job.m-0
 											li.vl-company_job--item
 												.text-bold
-													a(href="#") Android Developer (Up to $2,000)
+													a(href="chi-tiet-1-viec-lam.html") Android Developer (Up to $2,000)
 												.d-flex.text-small
 													.job-luong.text-bold
 														span.mdi.mdi-currency-usd
@@ -256,7 +260,7 @@ block main
 														span.ml-1 02/03/2010
 											li.vl-company_job--item
 												.text-bold
-													a(href="#") C/C++ Software Engineer
+													a(href="chi-tiet-1-viec-lam.html") C/C++ Software Engineer
 												.d-flex.text-small
 													.job-luong.text-bold
 														span.mdi.mdi-currency-usd
@@ -322,5 +326,3 @@ block main
 										data-caption="Đồng Nai"
 										value="Đồng Nai"
 										)
-							div.text-center.text-secondary
-								a(href="#").vl-tree_btn--more Xem thêm

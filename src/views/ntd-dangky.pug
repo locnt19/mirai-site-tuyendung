@@ -1,0 +1,229 @@
+extends _layout.pug
+
+block var
+	- var title = 'NTD đăng nhập'
+
+block main
+	section.container.ntd-dangky_wrapper.mt-4
+		.row
+			.col-lg-8
+				.profile-content.p-4
+					form(
+						action="javascript:void"
+						method="post"
+						data-role="validator"
+						)
+						.h5.m-0 Thông tin đăng ký
+						.login-line.z-1
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Email đăng nhập:
+									span.fg-red.ml-1 *
+							.col-md-9
+								input.login-input(
+									type="text"
+									name="dky_email"
+									placeholder="Email"
+									data-validate="minlength=1"
+								)
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập email hợp lệ
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Mật khẩu:
+									span.fg-red.ml-1 *
+							.col-md-9
+								input.login-input(
+									type="password"
+									name="dky_matkhau1"
+									placeholder="Mật khẩu"
+									data-validate="minlength=1"
+									)
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập mật khẩu hợp lệ
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Nhập lại mật khẩu:
+									span.fg-red.ml-1 *
+							.col-md-9
+								input.login-input(
+									type="password"
+									name="dky_matkhau2"
+									placeholder="Nhập lại mật khẩu"
+									data-validate="minlength=1 compare=dky_matkhau1"
+									)
+								span.invalid_feedback.text-bold.text-small.fg-red Mật khẩu không khớp
+						.login-line.z-1.mt-4
+						.h5.mt-0.mb-2 Thông tin Nhà tuyển dụng
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Họ và tên:
+									span.fg-red.ml-1 *
+							.col-md-9
+								input.login-input(
+									type="text"
+									name="dky_name"
+									placeholder="Họ và tên"
+									data-validate="minlength=1"
+								)
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập họ và tên
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Số điện thoại cá nhân:
+									span.fg-red.ml-1 *
+							.col-md-9
+								input.login-input(
+									type="text"
+									name="dky_phone"
+									placeholder="Số điện thoại"
+									data-validate="length=10 number"
+								)
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập số điện thoại gồm 10 chữ số
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Giới tính:
+									span.fg-red.ml-1 *
+							.col-md-9
+								select.login-input(
+									data-role="select"
+									data-filter="false"
+									data-duration="0"
+									name="dky_gioitinh"
+									data-validate="not=-1"
+								)
+									option(value="-1" selected).d-none -- Chọn giới tính --
+									option(value="0") Nam
+									option(value="1") Nữ
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn giới tính của bạn
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Công ty:
+									span.fg-red.ml-1 *
+							.col-md-9
+								input.login-input(
+									type="text"
+									name="dky_company"
+									placeholder="Số điện thoại"
+									data-validate="minlength=1"
+								)
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập số điện thoại gồm 10 chữ số
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Chức vụ:
+									span.fg-red.ml-1 *
+							.col-md-9
+								select.login-input(
+									data-role="select"
+									data-filter="false"
+									data-duration="0"
+									name="dky_gioitinh"
+									data-validate="not=-1"
+								)
+									option(value="-1" selected).d-none -- Chọn chức vụ của bản thân --
+									option(value="0") Nhân viên
+									option(value="1") Trưởng nhóm
+									option(value="2") Phó phòng
+									option(value="3") Trưởng phòng
+									option(value="4") Phó giám đốc
+									option(value="5") Giám Đốc
+									option(value="6") Tổng giám đốc
+									option(value="7") Chủ tịch
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn giới tính của bạn
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Địa chỉ làm việc:
+									span.fg-red.ml-1 *
+							.col-md-9.d-flex.flex-wrap
+								.col-sm-4
+									input.login-input(
+									type="text"
+									name="dky_address1"
+									placeholder="Số nhà / tên đường"
+									data-validate="minlength=1"
+								)
+									span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập Số nhà, tên đường nơi làm việc
+								.col-sm-4
+									select.login-input(
+										data-role="select"
+										data-filter="false"
+										data-duration="0"
+										name="dky_address2"
+										data-validate="not=-1"
+									)
+										option(value="-1" selected).d-none -- Chọn tỉnh / thành phố --
+										option(value="0") Hà Nội
+										option(value="1") Hồ Chí Minh
+										option(value="2") Bình Dương
+										option(value="3") Bắc Ninh
+										option(value="4") Đồng Nai
+									span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn tỉnh / thành phố
+								.col-sm-4
+									select.login-input(
+										data-role="select"
+										data-filter="false"
+										data-duration="0"
+										name="dky_address3"
+										data-validate="not=-1"
+									)
+										option(value="-1" selected).d-none -- Chọn quận / huyện --
+										option(value="0") Hà Nội
+										option(value="1") Hồ Chí Minh
+										option(value="2") Bình Dương
+										option(value="3") Bắc Ninh
+										option(value="4") Đồng Nai
+									span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn quận / huyện
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Skype:
+							.col-md-9
+								input.login-input(
+									type="text"
+									name="dky_skype"
+									placeholder="Tài khoản Skype"
+								)
+						.row
+							.col-md-3.pb-0
+								.text-secondary.text-bold Vị trí nhà tuyển dụng quan tâm:
+									span.fg-red.ml-1 *
+							.col-md-9
+								select.login-input(
+									multiple
+									data-role="select"
+									data-duration="0"
+									name="dky_job"
+									)
+									option(value="0")  IT - Phần mềm
+									option(value="1") Nhân viên kinh doanh
+									option(value="2") Bảo hiểm
+									option(value="3") Cồng nghệ cao
+									option(value="4") Bất động sản
+									option(value="5") Điện / Điện tử
+								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn tỉnh / thành phố
+						.row
+							.col-md-9.offset-md-3
+								p.mt-3.text-small.d-flex.flex-wrap.flex-align-start
+									input.col-auto.order-1(
+										data-cls-checkbox="login-checkbox"
+										data-role="checkbox"
+										data-style="1"
+										data-validate="required"
+									)
+									span.w-100.invalid_feedback.text-bold.fg-red.order-3 Bạn chưa đồng ý với điều khoản dịch vụ của Mirai Tuyển dụng
+									span.col.p-0.order-2
+										span.mr-1 Tôi đồng ý với
+										a.mr-1(href="#" style="color: #007DC4") Điều khoản dịch vụ
+										span.mr-1 và
+										a.mr-1(href="#" style="color: #007DC4") Chính sách bảo mật
+										span của Mirai Tuyển dụng
+						button(type="submit" style="width: 200px").login-btn_login.mx-auto.mt-3 Hoàn tất
+			.col-lg-4.pl-4-lg.mb-4
+				.profile-content.p-4
+					.h6.m-0 Quy định
+					.login-line.z-1
+					.text-secondary.p-4
+						p.m-0 
+							| Để đảm bảo chất lượng dịch vụ, Mirai Tuyển dụng 
+							span.fg-red không cho phép một người dùng tạo nhiều tài khoản khác nhau.
+							|  Nếu phát hiện vi phạm, TopCV sẽ ngừng cung cấp dịch vụ tới tất cả các tài khoản trùng lặp hoặc chặn toàn bộ truy cập tới hệ thống website của TopCV.
+						p Đối với trường hợp khách hàng đã sử dụng hết 3 tin tuyển dụng miễn phí, TopCV hỗ trợ kích hoạt đăng tin tuyển dụng không giới hạn sau khi quý doanh nghiệp cung cấp thông tin giấy phép kinh doanh.
+						p
+							| Mọi thắc mắc vui lòng liên hệ Hotline CSKH: 
+							span.fg-red xxx xxx xxxx

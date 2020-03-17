@@ -1,0 +1,186 @@
+extends _layout.pug
+
+block var
+	- var title = 'Profile-client Việc làm đã lưu'
+
+block main
+	section.container
+		nav.breadcrumb.mt-4.mb-4
+			a.breadcrumb-step(href='index.html') Trang chủ
+			a.breadcrumb-step(href='profile-client.html') Hồ sơ
+			a.breadcrumb-step.breadcrumb-step_active(href='viec-da-luu.html') Việc làm của bạn
+	section.container
+		.profile-saved_wrapper.bg-white
+			ul.profile-tabs(data-role="tabs" data-expand="true")
+				li
+					a(href="#viec_da_luu") Việc đã lưu
+				li
+					a(href="#viec_da_nop") Việc làm đã nộp
+				li
+					a(href="#") Nhà tuyển dụng đã xem
+			#viec_da_luu.p-4.p-8-md
+				-for(var i = 0; i < 4; i++)
+					article.job-box.flex-column.flex-row-md.p-0.py-2.py-0-md
+						.img
+							a(href="profile-nha-tuyen-dung.html")
+								img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+						.info.text-center.text-left-md.p-0.p-2-md
+							.job-box_title.text-bold
+								a(href="chi-tiet-1-viec-lam.html" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
+							.job-box_subtitle.text-small
+								a(href="profile-nha-tuyen-dung.html" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
+							.d-flex.flex-justify-center.flex-justify-start-md
+								.job-luong.text-small.text-bold 21 ~ 30tr VNĐ
+								.job-diadiem.text-small.ml-4(title="Địa điểm")
+									span.mdi.mdi-map-marker
+									span.ml-1 Hồ Chí Minh
+						.time.d-flex-md.flex-column-md.text-center.mr-5-md.mr-20-lg
+							span.text-secondary Hết hạn
+							span.ml-1.m-0-md.text-small 19/03/2020
+						.action.d-flex.flex-align-center.mt-2.mt-0-md
+							button(style="min-width: auto").ctvl-btn_ungtuyen Ứng tuyển
+							butotn.ml-1.button.link Xóa
+			#viec_da_nop.p-4.p-8-md
+				-for(var i = 0; i < 2; i++)
+					article.job-box.flex-column.flex-row-md.p-0.py-2.py-0-md
+						.img
+							a(href="profile-nha-tuyen-dung.html")
+								img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+						.info.text-center.text-left-md.p-0.p-2-md
+							.job-box_title.text-bold
+								a(href="chi-tiet-1-viec-lam.html" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
+							.job-box_subtitle.text-small
+								a(href="profile-nha-tuyen-dung.html" title="AEONMALL Vietnam Co., Ltd") AEONMALL Vietnam Co., Ltd
+							.d-flex.flex-justify-center.flex-justify-start-md
+								.job-luong.text-small.text-bold 21 ~ 30tr VNĐ
+								.job-diadiem.text-small.ml-4(title="Địa điểm")
+									span.mdi.mdi-map-marker
+									span.ml-1 Hồ Chí Minh
+						.time.d-flex-md.flex-column-md.text-center.mr-5-md.mr-20-lg
+							span.text-secondary Hết hạn
+							span.ml-1.m-0-md.text-small 19/03/2020
+						.action.d-flex.flex-align-center.mt-2.mt-0-md
+							button(style="min-width: auto" disabled).button.dark.outline.no-hover.mr-2 đã ứng tuyển
+	section.job.totnhat.mb-6
+		.container
+			.h4.job-title.text-center.mt-10 Việc làm có thể bạn thích
+			.row
+				.col-12
+					.swiper-container
+						.swiper-wrapper
+							-for(var j = 0; j < 3; j++)
+								.swiper-slide
+										ul.job-list.unstyled-list
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") Accounting Officer (Aeonmall Tân Phú)
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") AEONMALL Vietnam Co., Ltd
+														.job-luong.text-small.text-bold Thương lượng
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") HR Specialist (Recruitment, C&B)
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") Nexon-Networks VINA
+														.job-luong.text-small.text-bold 15 ~ 20Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") Công Ty Cổ Phần Vinhomes
+														.job-luong.text-small.text-bold Thương lượng
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") Accounting Officer (Aeonmall Tân Phú)
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") AEONMALL Vietnam Co., Ltd
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") Công Ty TNHH Sản Xuất Và Kinh Doanh Vinfast - Thành Viên Của Vingroup
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") HR Specialist (Recruitment, C&B)
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") Nexon-Networks VINA
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+											li
+												article.job-box
+													.img
+														a(href="profile-nha-tuyen-dung.html")
+															img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+													.info
+														.job-box_title.text-bold
+															a(href="chi-tiet-1-viec-lam.html") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
+														.job-box_subtitle.text-small
+															a(href="profile-nha-tuyen-dung.html") Công Ty Cổ Phần Vinhomes
+														.job-luong.text-small.text-bold 8 ~ 12Tr VNĐ
+														.job-diadiem.text-small
+															span.mdi.mdi-map-marker.pos-absolute
+															span.ml-4 Hồ Chí Minh
+						.job-pagination

@@ -1,0 +1,165 @@
+extends _layout.pug
+
+block var
+	- var title = 'Danh sách ngành nghề'
+
+block main
+	section.container.px-0-md
+		nav.breadcrumb.mt-4.mb-2
+			a.breadcrumb-step(href='index.html') Trang chủ
+			a.breadcrumb-step.breadcrumb-step_active(href='viec-lam.html') Việc làm
+	section.vl-form
+		.container
+			form.banner-lc_search
+				input.banner-lc_search--input(
+					name="query"
+					type="text"
+					data-role="input"
+					placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty"
+					data-prepend="<span class='mdi mdi-magnify'></span>"
+					data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
+				select.banner-lc_search--select(
+					name="dia-diem"
+					data-role="select"
+					data-duration="0")
+					option(value="all") Tất cả địa điểm
+					option(value="brvt") Bà Rịa - Vũng Tàu
+					option(value="hn") Hà Nội
+					option(value="hcm") Hồ Chí Minh
+				button(type="submit").button.banner-lc_search--button Tìm kiếm
+	section.container.mt-4.px-0-md
+		.row
+			.col-lg-8.col-xl-9
+				.profile-content.p-4
+					.h5.mb-0 Việc làm theo ngành nghề
+					.login-line.z-1
+					.dsnn-wrapper
+						-for(var i = 0; i < 3; i++)
+							.dsnn-item.mb-3
+								.text-bold.fg-blue Bán hàng / tiếp thị
+								ul.dsnn-list.text-secondary.m-0
+									li
+										a(href="viec-lam.html") Tiếp thị / Marketing
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Tiếp thị trực tuyến
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Bán lẻ / bán sỉ
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Bán hàng / Kinh doanh 
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+							.dsnn-item.mb-3
+								.text-bold.fg-blue Dịch vụ
+								ul.dsnn-list.text-secondary.m-0
+									li
+										a(href="viec-lam.html") Tư vấn
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") An Ninh / Bảo Vệ
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Luật / Pháp lý
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Dịch vụ khách hàng
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Lao động phổ thông
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Bưu chính viễn thông
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Vận chuyển / Giao nhận /  Kho vận
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Phi chính phủ / Phi lợi nhuận
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+							.dsnn-item.mb-3
+								.text-bold.fg-blue Chăm sóc sức khỏe
+								ul.dsnn-list.text-secondary.m-0
+									li
+										a(href="viec-lam.html") Y tế / Chăm sóc sức khỏe
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Dược phẩm
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+							.dsnn-item.mb-3
+								.text-bold.fg-blue Sản xuất
+								ul.dsnn-list.text-secondary.m-0
+									li
+										a(href="viec-lam.html") Dệt may / Da giày / Thời trang
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Quản lý chất lượng (QA/QC)
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Thu mua / Vật tư
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") An toàn lao động
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Sản xuất / Vận hành sản xuất
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") Đồ gỗ
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+									li
+										a(href="viec-lam.html") In ấn / Xuất bản
+										span.text-small.fg-red.text-bold.ml-1 (1.978)
+			.col-lg-4.col-xl-3.pl-4-lg
+				.profile-content.p-4
+					.mb-4
+						.h5.mb-0 Việc làm theo đối tượng
+						.login-line.z-1
+						ul.dsnn-list.text-secondary.m-0
+							li
+								a.fg-red.text-bold(href="viec-lam.html") Việc làm nổi bật trong tuần
+							li
+								a(href="viec-lam.html") Việc làm $1000+
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Mới tốt nghiệp / Thực tập
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Quản lý điều hành
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Thời vụ / Nghề tự do
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Tạm thời / Dự án
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+					.mb-4
+						.h5.mb-0 Việc làm theo địa điểm
+						.login-line.z-1
+						div
+							.text-bold Trong nước
+							ul.dsnn-list.dsnn-list2.text-secondary.m-0
+								li
+									a(href="viec-lam.html") Hồ Chí Minh
+									span.text-small.fg-red.text-bold.ml-1 (1.978)
+								li
+									a(href="viec-lam.html") Hà Nội
+									span.text-small.fg-red.text-bold.ml-1 (1.978)
+								li
+									a(href="viec-lam.html") Bình Dương
+									span.text-small.fg-red.text-bold.ml-1 (1.978)
+								li
+									a(href="viec-lam.html") Đồng Nai
+									span.text-small.fg-red.text-bold.ml-1 (1.978)
+								li
+									a(href="viec-lam.html") Bà Rịa Vũng Tàu
+									span.text-small.fg-red.text-bold.ml-1 (1.978)
+								li
+									a(href="viec-lam.html") Cần Thơ
+									span.text-small.fg-red.text-bold.ml-1 (1.978)
+								li
+									a(href="viec-lam.html") An Giang
+									span.text-small.fg-red.text-bold.ml-1 (1.978)
+								li
+									a(href="viec-lam.html") Bạc Liêu
+									span.text-small.fg-red.text-bold.ml-1 (1.978)

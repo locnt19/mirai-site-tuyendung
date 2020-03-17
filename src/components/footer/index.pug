@@ -3,7 +3,7 @@ footer.ms-footer
 		.row
 			.col-6.col-md-3
 				p.title Chức năng
-				ul.unstyled-list.m-0.mt-2.mb-4
+				ul.text-secondary.unstyled-list.m-0.mt-2.mb-4
 					li
 						a(href="#") Tài Khoản
 					li
@@ -16,7 +16,7 @@ footer.ms-footer
 						a(href="#") Phản hồi từ nhà tuyển dụng
 			.col-6.col-md-3
 				p.title MiraiHuman
-				ul.unstyled-list.m-0.mt-2.mb-4
+				ul.text-secondary.unstyled-list.m-0.mt-2.mb-4
 					li
 						a(href="#") Về MiraiHuman
 					li
@@ -31,7 +31,7 @@ footer.ms-footer
 						a(href="#") Quy trình giải quyết tranh chấp
 			.col-6.col-md-3
 				p.title Kết nối với MiraiHuman
-				ul.unstyled-list.m-0.mt-2.mb-4
+				ul.text-secondary.unstyled-list.m-0.mt-2.mb-4
 					li
 						a(href="#").d-flex.flex-align-center
 							span.mdi.mdi-facebook-box
@@ -42,7 +42,7 @@ footer.ms-footer
 							span.ml-2 YouTube
 			.col-6.col-md-3
 				p.title Website đối tác
-				ul.unstyled-list.m-0.mt-2.mb-4
+				ul.text-secondary.unstyled-list.m-0.mt-2.mb-4
 					li
 						a(href="#") example.com
 					li
@@ -55,7 +55,7 @@ footer.ms-footer
 					a(href="#")
 						img(src="img/bo-cong-thuong.png", alt="bo-cong-thuong.png")
 		.row
-			.col-12.border-top.bd-white.mt-4.text-center
+			.col-12.text-center.text-secondary.border-top.bd-white.mt-4
 				p.mt-2.text-bold MiraiHuman - Mạng việc làm &  Tuyển dụng hàng đầu Việt Nam
 				p.mt-0
 					span Copy right &copy; Công Ty TNHH MiraiHuMan
@@ -65,3 +65,117 @@ footer.ms-footer
 					span.ml-6 Nơi cấp: Sở Kế Hoạch Và Đầu Tư Thành Phố Hồ Chí Minh
 					span.ml-6 Điện thoại: xx xxxx xxxx
 					span.ml-6 Email: contact@miraihuman.com
+
+section#LoginInfobox.login-infobox_wrapper(
+	data-role="infobox"
+)
+	.login-close.button.square.closer
+	ul.text-bold(
+		data-role="tabs"
+		data-cls-tabs="flex-justify-center"
+		data-expand="true")
+		li
+			a(href="#form_dangnhap") ĐĂNG NHẬP
+		li
+			a(href="#form_dangky") ĐĂNG KÝ
+	form#form_dangnhap(
+		action="javascript:void(0)"
+		data-role="validator"
+		method="post"
+		)
+		.h5.text-center.mt-4.mb-2.mx-4 Đăng nhập & khám phá Mirai Tuyển dụng
+		.pt-0.pb-4.px-4
+			p.text-secondary.text-center.mb-2 Đăng nhập bằng
+			.d-flex.flex-justify-center.mb-3
+				a(href="#facebook").login-btn_fb.mr-4
+					span.icon.mdi.mdi-facebook
+				a(href="#google").login-btn_gg
+					span.icon.icon.mdi.mdi-google
+			p.login-line.text-small.mt-0
+				span hoặc
+			p.mt-3
+				input.login-input(
+					type="text"
+					name="dn_email"
+					placeholder="Email"
+					data-validate="minlength=1"
+				)
+				span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập email
+			p.mt-3
+				input.login-input(
+					type="password"
+					name="dn_matkhau"
+					placeholder="Mật khẩu"
+					data-validate="minlength=1"
+					)
+				span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập mật khẩu
+			p.d-none.login-notifications.text-bold.text-small.fg-red.mt-2
+				span Sai tài khoản hoặc mật khẩu
+			p.mt-3
+				button(type="submit").login-btn_login Đăng nhập
+			p.text-small.text-center.mt-2
+				a(href="#quenmatkhau") Quên mật khẩu?
+			p.login-line.mt-0
+			p.mt-0
+				a(href="#form_dangky").login-btn_register Đăng ký
+			p.text-small.mt-2.d-none.d-block-sm
+				strong Bạn không đăng nhập được tài khoản?
+				span.ml-1 Vui lòng gọi tới số 
+				strong xx xxxx xxxx
+				span.ml-1 (giờ hành chính) để được hỗ trợ.
+	form#form_dangky(
+		data-role="validator"
+		method="post"
+		)
+		.h5.text-center.mt-4.mb-2.mx-4 Đăng ký & khám phá span Mirai Tuyển dụng
+		.pt-0.pb-4.px-4
+			p.mt-3
+				input.login-input(
+					type="text"
+					name="dky_hovaten"
+					placeholder="Họ và tên"
+					data-validate="minlength=2"
+				)
+				span.invalid_feedback.text-bold.fg-red Vui lòng nhập Họ tên của bạn
+			p.mt-3
+				input.login-input(
+					type="text"
+					name="dky_email"
+					placeholder="Email"
+					data-validate="email"
+				)
+				span.invalid_feedback.text-bold.fg-red Email không hợp lệ
+			p.mt-3
+				input.login-input(
+					type="password"
+					name="dky_matkhau1"
+					data-validate="minlength=1"
+					placeholder="Mật khẩu"
+					)
+				span.invalid_feedback.text-bold.fg-red Vui lòng nhập mật khẩu
+			p.mt-3
+				input.login-input(
+					type="password"
+					name="dky_matkhau2"
+					data-validate="minlength=1 compare=dky_matkhau1"
+					placeholder="Nhập lại mật khẩu")
+				span.invalid_feedback.text-bold.fg-red Mật khẩu không khớp
+			p.mt-3.text-small.d-flex.flex-wrap.flex-align-start
+				input.col-auto.order-1(
+					data-cls-checkbox="login-checkbox"
+					data-role="checkbox"
+					data-style="1"
+					data-validate="required"
+				)
+				span.w-100.invalid_feedback.text-bold.fg-red.order-3 Bạn chưa đồng ý với điều khoản dịch vụ của Mirai Tuyển dụng
+				span.col.p-0.order-2
+					span.mr-1 Tôi đồng ý với
+					a.mr-1(href="#" style="color: #007DC4") Điều khoản dịch vụ
+					span.mr-1 và
+					a.mr-1(href="#" style="color: #007DC4") Chính sách bảo mật
+					span của Mirai Tuyển dụng
+			p.mt-3
+				button(type="submit").login-btn_register Đăng ký
+			p.text-small.mt-2.text-center
+				span.mr-1 Bạn đã có tài khoản?
+				a(href="#form_dangnhap" style="color: #007DC4") Đăng nhập

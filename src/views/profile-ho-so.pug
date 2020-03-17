@@ -1,0 +1,38 @@
+extends _layout.pug
+
+block var
+	- var title = 'Profile-client hồ sơ'
+
+block main
+	section.container
+		nav.breadcrumb.mt-4.mb-4
+			a.breadcrumb-step(href='index.html') Trang chủ
+			a.breadcrumb-step(href='profile-client.html') Hồ sơ
+			a.breadcrumb-step.breadcrumb-step_active(href='viec-da-luu.html') Việc làm của bạn
+		a(href="profile-client.html").text-secondary
+			span.mdi.mdi-arrow-left.mr-1
+			span Quay lại dashboard client
+	section.profile-user_wrapper.container
+		.infobox.bg-white.border.bd-gray.my-2.py-1.pl-4.pr-2
+			.text-secondary.d-flex.flex-align-center
+				span(style="font-size: 20px").mdi.mdi-information.fg-blue.mr-1
+				p.mt-0
+					strong.fg-orange User name
+					span , Bổ sung thông tin hồ sơ của bạn để nhận được nhiều cơ hội phỏng vấn hơn.
+				.infobox-btn_close.mdi.mdi-close.c-pointer.ml-auto
+		.profile-user_box.bg-white.border.bd-gray.my-4.py-2.px-4
+			.text-secondary
+				| Mức độ hoàn chỉnh hồ sơ:  
+				span.text-bold.fg-blue Chưa hoàn chỉnh
+		.profile-user_box.bg-white.border.border-left-none.bd-gray.my-4
+			.d-flex.border-left.border-size-5.bd-blue.p-4
+				.profile-user_box--img.border.bd-gray.p-2.ml-2-md
+					img(src="https://via.placeholder.com/150", alt="avatar")
+				.profile-user_box--info.ml-8-md
+					.sub-header.text-bold.fg-blue.mb-0 Nguyễn Thành Lộc
+					.text-secondary.mt-4
+						p.mt-0 Vị trí: Developer
+						p.mt-0 Công ty gần đây nhất: abc
+						p.mt-0 Bằng cấp cao nhất: Cao Đẳng Kỹ Thuật Cao Thắng
+				.profile-user_btn--edit.mdi.mdi-pencil
+		.profile-user_box.bg-white.border.border-left-none.bd-gray.my-4

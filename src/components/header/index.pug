@@ -1,17 +1,17 @@
 header.user-nav
 	div.logo-wrapper
 		a(href="index.html").user-nav_logo
-			img(src="img/logo.png", alt="logo")
+			img(src="img/logo.png" alt="logo")
 		.user-nav_hamburger
 			span.mdi.mdi-menu
 	nav.user-nav_link.left
 		li.user-nav_link--item
-			a(href="#").mdi.mdi-home.active
+			a(href="index.html").mdi.mdi-home.active
 		li.user-nav_link--item
 			a(href="viec-lam.html") Việc làm
 			ul.user-nav_sublink
 				li.user-nav_link--item
-					a(href="viec-lam.html") Ngành nghề / Địa điểm
+					a(href="danh-sach-nganh-nghe.html") Ngành nghề / Địa điểm
 				li.user-nav_link--item
 					a(href="viec-lam.html") Việc làm Freelancer
 				li.user-nav_link--item
@@ -25,69 +25,17 @@ header.user-nav
 		li.user-nav_link--item
 			a(href="#") Tư vấn
 		li.user-nav_link--item
-			a(href="#") Nhà tuyển dụng
+			a(href="ntd-login.html") Nhà tuyển dụng
 	nav.user-nav_link.right
 		li.user-nav_link--item.login
 			a(href="javascript:void(0)" onclick="$('#LoginInfobox').data('infobox').open()") Đăng nhập
-		//- li.user-nav_link--item.register
-		//- 	a(href="#dangky") Đăng ký
 		li.user-nav_link--item.language
 			a(href="#vn")
-				img(src="img/flagvn.png", alt="flagvn")
+				img(src="img/flagvn.png" alt="flagvn")
 			ul.user-nav_sublink
 				li.user-nav_link--item
 					a(href="#jp")
-						img(src="img/flagvn.png", alt="flagvn")
+						img(src="img/flagvn.png" alt="flagvn")
 				li.user-nav_link--item
 					a(href="#jp")
-						img(src="img/flagjp.png", alt="flagjp")
-section.login-infobox_wrapper
-	form#LoginInfobox.login-infobox(
-		data-role="infobox"
-		action="javascript:void(0)"
-		method="post"
-		)
-		.login-close.button.square.closer
-		ul.text-bold(
-			data-role="tabs"
-			data-cls-tabs="flex-justify-center"
-			data-expand="true")
-			li
-				a(href="#login_dangnhap") ĐĂNG NHẬP
-			li
-				a(href="#") ĐĂNG KÝ
-		.h5.text-center.mt-5.mb-2.mx-4 Đăng nhập & khám phá Mirai Tuyển dụng
-		.pt-0.pb-4.px-4
-			p.text-secondary.text-center.mb-2 Đăng nhập bằng
-			.d-flex.flex-justify-center.mb-3
-				a(href="#facebook").login-btn_fb.mr-4
-					span.icon.mdi.mdi-facebook
-				a(href="#google").login-btn_gg
-					span.icon.icon.mdi.mdi-google
-			p.login-line.text-small.mt-0
-				span hoặc
-			#login_dangnhap
-				p.mt-3
-					input.login-input(type="text" placeholder="Email")
-				p.mt-3
-					input.login-input(
-						type="password"
-						data-role="input"
-						data-reveal-button-icon="<span class='mdi mdi-eye'></span>"
-						data-clear-button="false"
-						placeholder="Mật khẩu"
-						)
-				p.login-notifications.text-bold.text-small.color_red.mt-2
-					span Sai tài khoản hoặc mật khẩu
-				p.mt-3
-					button(type="submit").login-btn_login Đăng nhập
-				p.text-small.text-center.mt-2
-					a(href="#quenmatkhau") Quên mật khẩu?
-				p.login-line.mt-0
-				p.mt-0
-					a(href="dang-ky.html").login-btn_register Đăng ký
-				p.text-small.mt-2.d-none.d-block-sm
-					strong Bạn không đăng nhập được tài khoản?
-					span.ml-1 Vui lòng gọi tới số 
-					strong xx xxxx xxxx
-					span.ml-1 (giờ hành chính) để được hỗ trợ.
+						img(src="img/flagjp.png" alt="flagjp")

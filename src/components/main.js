@@ -6,7 +6,9 @@ $(document).ready(function () {
 	ShowHideSearchRecent();
 	FilterListViecLam();
 	ResetFilterListViecLam();
-	ViewMoreViecLamTree();
+	ViewMore();
+	InfoBox_Event();
+
 });
 
 function BackToTop() {
@@ -33,7 +35,7 @@ function ShowHideSearchRecent() {
 	$('.banner-lc_search--input input').on('focusin', function () {
 		$('.banner-lc_search--recent').addClass('show');
 	});
-	$('.banner-lc_search--input input').on('focusout', function () {
+	$('.banner-lc_search--close').on('click', function () {
 		$('.banner-lc_search--recent').removeClass('show');
 	});
 };
@@ -56,10 +58,10 @@ function SlideSwiper() {
 		spaceBetween: 32,
 		loop: true,
 		autoplay: {
-			delay: 4000,
+			delay: 10000,
 			disableOnInteraction: false,
 		},
-		speed: 2500,
+		speed: 3000,
 		pagination: {
 			el: '.job.totnhat .job-pagination',
 			clickable: true
@@ -68,7 +70,7 @@ function SlideSwiper() {
 	const job_banner = new Swiper('.job.banner .swiper-container', {
 		loop: true,
 		autoplay: {
-			delay: 8000,
+			delay: 12000,
 			disableOnInteraction: false,
 		},
 		navigation: {
@@ -90,7 +92,6 @@ function SlideSwiper() {
 			clickable: true
 		}
 	});
-
 };
 
 function FilterListViecLam() {
@@ -113,11 +114,53 @@ function ResetFilterListViecLam() {
 	});
 }
 
-function ViewMoreViecLamTree() {
-	$('.vl-tree_list li').length < 3 ? $('.vl-tree_btn--more').hide() : null;
-	$('.vl-tree_btn--more').click(function (e) {
+function ViewMore() {
+	var dsnnListContainer = $('.dsnn-list2');
+	var dsnnListItem = $('.dsnn-list2 li');
+	ViewMore_Items('hide', dsnnListItem, 4, dsnnListItem.length);
+	ViewMore_HandlerEvent(dsnnListContainer, dsnnListItem, 4);
+
+	var vlTreeListDiaDiemContainer = $('.vl-tree_list.dia-diem');
+	var vlTreeListDiaDiemItem = $('.vl-tree_list.dia-diem li');
+	ViewMore_Items('hide', vlTreeListDiaDiemItem, 34, vlTreeListDiaDiemItem.length);
+	ViewMore_HandlerEvent(vlTreeListDiaDiemContainer, vlTreeListDiaDiemItem, 4);
+}
+
+function ViewMore_Items(type, array, start, end) {
+	if (type === 'show') {
+		for (var i = start; i < end; i++) {
+			$(array[i]).show();
+		}
+	}
+	if (type === 'hide') {
+		for (var i = start; i < end; i++) {
+			$(array[i]).hide();
+		}
+	}
+}
+
+function ViewMore_HandlerEvent(container, array, number) {
+	var button = $("<a class='viewmore' href>Xem thêm</a>");
+	array.length <= number ? null : button.appendTo($(container));
+	button.click(function (e) {
 		e.preventDefault();
-		$('.vl-tree_list.dia-diem').toggleClass('viewmore');
-		$('.vl-tree_list.dia-diem').hasClass('viewmore') ? $(this).text('Thu gọn') : $(this).text('Xem thêm');
+		switch ($(button).text()) {
+			case 'Xem thêm':
+				ViewMore_Items('show', array, number, array.length);
+				$(button).text('Thu gọn');
+				break;
+			case 'Thu gọn':
+				ViewMore_Items('hide', array, number, array.length);
+				$(button).text('Xem thêm');
+				break;
+			default:
+				break;
+		}
+	})
+}
+
+function InfoBox_Event() {
+	$('.infobox .infobox-btn_close').on('click', function () {
+		$(this).parents('.infobox').remove();
 	});
 }

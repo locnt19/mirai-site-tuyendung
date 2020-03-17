@@ -1,98 +1,21 @@
-$breadcrumb-theme-1: #0066FF // color | background active
-$breadcrumb-theme-2: #fff  // background | color active
-$breadcrumb-theme-3: #0066FF  // - #111  // hover
-$breadcrumb-theme-4: #11CFE7 // - #222  // arrow
-
 .breadcrumb
-	text-align: center
-	display: inline-block
-	overflow: hidden
-	border-radius: 5px
-	counter-reset: flag
-	margin: 16px 0
-	@media screen and ( min-width: 576px )
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
-		
-	&__step
-		text-decoration: none
-		outline: none
-		display: block
-		float: left
-		font-size: 12px
-		line-height: 36px
-		padding: 0 10px 0 60px
-		position: relative
-		transition: background .5s
-		// background: $breadcrumb-theme-2
-		// color: $breadcrumb-theme-1
-		color: $breadcrumb-theme-2
-		background: $breadcrumb-theme-1
-
-		&:first-child
-			padding-left: 46px
-			border-radius: 5px 0 0 5px
-
-			&::before
-				left: 14px
-
-		&:last-child
-			border-radius: 0 5px 5px 0
-			padding-right: 20px
-
+	line-height: 1.15
+	&-step
+		margin-right: 4px
+		font-size: 14px
+		&:not(:last-of-type)
 			&::after
-				content: none
-
-		// circle
-		&::before
-			content: counter(flag)
-			counter-increment: flag
-			border-radius: 100%
-			width: 20px
-			height: 20px
-			line-height: 20px
-			margin: 8px 0
-			position: absolute
-			top: 0
-			left: 30px
-			font-weight: bold
-			background: $breadcrumb-theme-2
-			box-shadow: 0 0 0 1px $breadcrumb-theme-1
-			color: $breadcrumb-theme-1
-
-		// arrow
-		&::after
-			content: ''
-			position: absolute
-			top: 0
-			right: -18px
-			width: 36px
-			height: 36px
-			transform: scale(0.707) rotate(45deg)
-			z-index: 1
-			border-radius: 0 5px 0 50px
-			transition: background 0.5s
-			box-shadow: 2px -2px 0 2px $breadcrumb-theme-4
-			// background: $breadcrumb-theme-2
-			background: $breadcrumb-theme-1
-		&--active
-			// color: $breadcrumb-theme-2
-			// background: $breadcrumb-theme-1
-			background: $breadcrumb-theme-2
-			color: $breadcrumb-theme-1
-			
-			&::before
-				color: $breadcrumb-theme-1
-
-			&::after
-				background: $breadcrumb-theme-1
-
-		&:hover
-			color: $breadcrumb-theme-2
-			background: $breadcrumb-theme-3
-
-			&::before
-				color: $breadcrumb-theme-1
-
-			&::after
-				color: $breadcrumb-theme-1
-				background: $breadcrumb-theme-3
+				content: '\F142'
+				display: inline-block
+				font-family: 'Material Design Icons'
+				font-size: inherit
+				text-rendering: auto
+				line-height: 1
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				margin-left: 4px
+				font-size: .85em
+				color: #333
+		&_active
+			font-weight: 700
+			color: #007DC4
