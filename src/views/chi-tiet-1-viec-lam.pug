@@ -4,60 +4,96 @@ block var
 	- var title = 'Chi tiết 1 việc làm'
 
 block main
-	section.container.px-0-md
+	section.container
 		nav.breadcrumb.mt-4.mb-2
 			a.breadcrumb-step(href='index.html') Trang chủ
 			a.breadcrumb-step(href='viec-lam.html') Việc làm
 			a.breadcrumb-step(href='viec-lam.html') IT - Phần mềm
 			a.breadcrumb-step.breadcrumb-step_active(href='chi-tiet-1-viec-lam.html') Software Development Part Leader
-
-	section.vl-form
-		.container
-			form.banner-lc_search
-				input.banner-lc_search--input(
-					name="query"
-					type="text"
-					data-role="input"
-					placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty"
-					data-prepend="<span class='mdi mdi-magnify'></span>"
-					data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
-				select.banner-lc_search--select(
-					name="dia-diem"
-					data-role="select"
-					data-duration="0")
-					option(value="all") Tất cả địa điểm
-					option(value="brvt") Bà Rịa - Vũng Tàu
-					option(value="hn") Hà Nội
-					option(value="hcm") Hồ Chí Minh
-				button(type="submit").button.banner-lc_search--button Tìm kiếm
-	section.container.mt-6.p-0-sm
-		.ctvl-company_headline
-			img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg")
-	section.container.mt-6.p-0-sm
-		.ctvl-company_box.d-flex.flex-align-center.p-4
-			a(href="#").ctvl-company_logo.d-flex.flex-align-center.flex-justify-center
-					img(src="img/nha-tuyen-dung/lg.png", alt="lg")
-			.ctvl-company_info
-				h1.ctvl-company_title.mb-2 Software Development Part Leader
-				p.mb-2.text-bold
-					a(href="#") LG Electronics Vietnam
-				p.mt-0.text-secondary
-					span.mdi.mdi-currency-usd
-					span.ml-3 12 ~ 17tr VNĐ
-				p.mt-0.text-secondary
-					span.mdi.mdi-map-marker-outline
-					span.ml-3 Hồ Chí Minh
-				p.mt-0.text-secondary
-					span.mdi.mdi-clock-outline
-					span.ml-3 Hạn nộp hồ sơ: 30/03/2020
-			.ctvl-company_actions
-				button.ctvl-btn_ungtuyen ứng tuyển ngay
-				button.ctvl-btn_luu
-					span.mdi.mdi-heart-outline.mr-1
-					span Lưu tin
-	section.container.mt-4.mb-6.p-0-sm
-		.ctvl-content_wrapper.row
-			.col-lg-8.col-xl-8
+	section.container.my-4
+		.row
+			.col-12
+				.vl-form.p-2
+					form.banner-lc_search
+						input.banner-lc_search--input(
+							name="query"
+							type="text"
+							data-role="input"
+							placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty,..."
+							data-prepend="<span class='mdi mdi-magnify'></span>"
+							data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
+						select.banner-lc_search--select(
+							name="dia-diem"
+							data-role="select"
+							data-duration="0")
+							option(value="all") Tất cả địa điểm
+							option(value="brvt") Bà Rịa - Vũng Tàu
+							option(value="hn") Hà Nội
+							option(value="hcm") Hồ Chí Minh
+						button(type="submit").button.banner-lc_search--button Tìm ngay
+					.banner-lc_search--recent
+						.banner-lc_search--close.mdi.mdi-close
+						.recent
+							.title TÌM KIẾM GẦN ĐÂY
+							.content
+								.item
+									span
+										a(href="viec-lam.html") brand manager brand manager brand manager
+									span (47 việc làm)
+								.item
+									span
+										a(href="viec-lam.html") brand manager brand manager brand manager
+									span (47 việc làm)
+						.recommend
+							.title TỪ KHÓA PHỔ BIẾN
+							.content
+								a(href="viec-lam.html").item
+									span brand manager
+									span (Bán hàng)
+								a(href="viec-lam.html").item
+									span Giám sát bán hàng
+									span (Bán hàng)
+								a(href="viec-lam.html").item
+									span Account Executive
+									span (Marketing)
+								a(href="viec-lam.html").item
+									span Kết toán tổng hợp
+									span (Ngân hàng)
+								a(href="viec-lam.html").item
+									span Project manager
+									span (IT - Phần mềm)
+								a(href="viec-lam.html").item
+									span Frontend developer
+									span (IT - Phần mềm)
+		.row.ctvl-company_headline.mt-4
+			.col-12
+				a(href="profile-nha-tuyen-dung.html")
+					img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg")
+		.row.mt-4
+			.col-12
+				.ctvl-company_box.d-flex.flex-align-center.p-4
+					a(href="profile-nha-tuyen-dung.html").ctvl-company_logo.d-flex.flex-align-center.flex-justify-center
+							img(src="img/nha-tuyen-dung/lg.png", alt="lg")
+					.ctvl-company_info
+						h1.ctvl-company_title.mb-2 Software Development Part Leader
+						p.mb-2.text-bold
+							a(href="profile-nha-tuyen-dung.html") LG Electronics Vietnam
+						p.mt-0.text-secondary
+							span.mdi.mdi-currency-usd
+							span.ml-3 12 ~ 17tr VNĐ
+						p.mt-0.text-secondary
+							span.mdi.mdi-map-marker-outline
+							span.ml-3 Hồ Chí Minh
+						p.mt-0.text-secondary
+							span.mdi.mdi-clock-outline
+							span.ml-3 Hạn nộp hồ sơ: 30/03/2020
+					.ctvl-company_actions
+						button.ctvl-btn_ungtuyen ứng tuyển ngay
+						button.ctvl-btn_luu
+							span.mdi.mdi-heart-outline.mr-1
+							span Lưu tin
+		.row.mt-4
+			.col-lg-8.mb-4
 				.ctvl-content.p-4
 					h2.title MÔ TẢ CÔNG VIỆC
 					p LGE Vehicle Component Solutions (LGE VS) Company focuses on smart & eco-friendly automotive components. The VC Company produces high-quality & state of the art in-car infotainment systems that deliver both information and entertainment on-the-go for many of the world‘s biggest automobile brands.
@@ -75,10 +111,10 @@ block main
 					p &nbsp; &nbsp; &nbsp; + At least 2 years working experience as Project Leader/ Manager. Having experience in automotive domain or embedded platform (based on Linux, QnX);
 					p &nbsp; &nbsp; &nbsp; + Technical background with experience in Connected Products, Telematics, or IoT is a big advantage;
 					p &nbsp; &nbsp; &nbsp; + Experience with one or more general purpose programming skills including but not limited to C/C++;
-			.col-lg-4.col-xl-4.pl-4-lg
+			.col-lg-4.pl-5-lg
 				.job.recommend.mb-6
-					h6.job-title.text-center.m-0.py-3 Thông tin tuyển dụng
-					ul.job-list2.unstyled-list.px-2.pb-2
+					.job-title.text-bold.text-center.m-0.py-2 Thông tin tuyển dụng
+					ul.job-list2.text-secondary.unstyled-list.px-2.pb-2
 						li
 							article.job-box.flex-align-start.p-2
 								strong.no-wrap.mr-2 Mức lương:
@@ -86,7 +122,7 @@ block main
 									span.fg-red 12 ~ 15tr VNĐ
 						li
 							article.job-box.flex-align-start.p-2
-								strong.no-wrap.mr-2 Hình thức làm việc:
+								strong.no-wrap.mr-2 Hình thức:
 								p.mt-0
 									span Toàn thời gian
 						li
@@ -96,24 +132,24 @@ block main
 									span Nhân viên
 						li
 							article.job-box.flex-align-start.p-2
-								strong.no-wrap.mr-2 Yêu cầu giới tính:
+								strong.no-wrap.mr-2 Giới tính:
 								p.mt-0
 									span Không yêu cầu
 						li
 							article.job-box.flex-align-start.p-2
-								strong.no-wrap.mr-2 Yêu cầu kinh nghiệm:
+								strong.no-wrap.mr-2 Kinh nghiệm:
 								p.mt-0
 									span 1 năm
 						li
 							article.job-box.flex-align-start.p-2
-								strong.no-wrap.mr-2 Địa điểm làm việc:
+								strong.no-wrap.mr-2 Nơi làm việc:
 								p.mt-0
 									a(href="#").mr-1 Hà Nội,
 									a(href="#").mr-1 Hồ Chí Minh,
-									a(href="#").mr-1 Hồ Chí Minh,
+									a(href="#").mr-1 Hà Nội,
 									a(href="#").mr-1 Hồ Chí Minh
 				.job.recommend
-					h6.job-title.text-center.m-0.py-3 Phù hợp với bạn
+					.job-title.text-bold.text-center.m-0.py-2 Phù hợp với bạn
 					ul.job-list2.unstyled-list.px-2.pb-2
 						-for(var i = 0; i < 8; i++)
 							li

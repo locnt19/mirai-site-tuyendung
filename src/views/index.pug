@@ -73,51 +73,45 @@ block main
 								span (IT - Phần mềm)
 	section.company.tieubieu.mb-6
 		.container
-			h2.text-center.mt-10 Nhà tuyển dụng nổi bật
-			.row.flex-justify-center
-				.col-sm-4.col-md-3.col-xl-2
-					figure.company-box
-						a(href="profile-nha-tuyen-dung.html").img
-							.ribbon.ribbon-top-right
-								span top
-							img(src='img/nha-tuyen-dung/nashtech.jpg' alt='img/nha-tuyen-dung/nashtech.jpg')
-						figcaption.mt-3.text-center
-							a(href="profile-nha-tuyen-dung.html") Nash Tech
-				.col-sm-4.col-md-3.col-xl-2
-					figure.company-box.mx-auto
-						a(href="profile-nha-tuyen-dung.html").img
-							img(src='img/nha-tuyen-dung/toshiba-software-development-viet-nam-co-ltd-logo.png' alt='img/nha-tuyen-dung/toshiba-software-development-viet-nam-co-ltd-logo.png')
-						figcaption.mt-3.text-center
-							a(href="profile-nha-tuyen-dung.html") Toshiba
-				.col-sm-4.col-md-3.col-xl-2
-					figure.company-box.mx-auto
-						a(href="profile-nha-tuyen-dung.html").img
-							.ribbon.ribbon-top-right
-								span top
-							img(src='img/nha-tuyen-dung/fpt-software-logo.png' alt='img/nha-tuyen-dung/fpt-software-logo.png')
-						figcaption.mt-3.text-center
-							a(href="profile-nha-tuyen-dung.html") FPT Software
-				.col-sm-4.col-md-3.col-xl-2
-					figure.company-box.mx-auto
-						a(href="profile-nha-tuyen-dung.html").img
-							img(src='img/nha-tuyen-dung/Hybrid-Technologies-LogoSuite_-fullcolor-(square).png' alt='img/nha-tuyen-dung/Hybrid-Technologies-LogoSuite_-fullcolor-(square).png')
-						figcaption.mt-3.text-center
-							a(href="profile-nha-tuyen-dung.html") Hybrid Technologies
-				.col-sm-4.col-md-3.col-xl-2
-					figure.company-box.mx-auto
-						a(href="profile-nha-tuyen-dung.html").img
-							img(src='img/nha-tuyen-dung/panasonic-vietnam-group-logo.png' alt='img/nha-tuyen-dung/panasonic-vietnam-group-logo.png')
-						figcaption.mt-3.text-center
-							a(href="profile-nha-tuyen-dung.html") Panasonic
-				.col-sm-4.col-md-3.col-xl-2
-					figure.company-box.mx-auto
-						a(href="profile-nha-tuyen-dung.html").img
-							img(src='img/nha-tuyen-dung/beckers.jpg' alt='img/nha-tuyen-dung/beckers.jpg')
-						figcaption.mt-3.text-center
-							a(href="profile-nha-tuyen-dung.html") Beckers
+			.h4.text-center.mt-10 Nhà tuyển dụng nổi bật
+			.d-flex.flex-wrap-sm.flex-justify-center-sm.scroll-y
+				figure.company-box
+					a(href="profile-nha-tuyen-dung.html").img
+						.ribbon.ribbon-top-right
+							span top
+						img(src='img/nha-tuyen-dung/nashtech.jpg' alt='img/nha-tuyen-dung/nashtech.jpg')
+					figcaption.mt-3.text-center
+						a(href="profile-nha-tuyen-dung.html") Nash Tech
+				figure.company-box
+					a(href="profile-nha-tuyen-dung.html").img
+						img(src='img/nha-tuyen-dung/toshiba-software-development-viet-nam-co-ltd-logo.png' alt='img/nha-tuyen-dung/toshiba-software-development-viet-nam-co-ltd-logo.png')
+					figcaption.mt-3.text-center
+						a(href="profile-nha-tuyen-dung.html") Toshiba
+				figure.company-box
+					a(href="profile-nha-tuyen-dung.html").img
+						.ribbon.ribbon-top-right
+							span top
+						img(src='img/nha-tuyen-dung/fpt-software-logo.png' alt='img/nha-tuyen-dung/fpt-software-logo.png')
+					figcaption.mt-3.text-center
+						a(href="profile-nha-tuyen-dung.html") FPT Software
+				figure.company-box
+					a(href="profile-nha-tuyen-dung.html").img
+						img(src='img/nha-tuyen-dung/Hybrid-Technologies-LogoSuite_-fullcolor-(square).png' alt='img/nha-tuyen-dung/Hybrid-Technologies-LogoSuite_-fullcolor-(square).png')
+					figcaption.mt-3.text-center
+						a(href="profile-nha-tuyen-dung.html") Hybrid Technologies
+				figure.company-box
+					a(href="profile-nha-tuyen-dung.html").img
+						img(src='img/nha-tuyen-dung/panasonic-vietnam-group-logo.png' alt='img/nha-tuyen-dung/panasonic-vietnam-group-logo.png')
+					figcaption.mt-3.text-center
+						a(href="profile-nha-tuyen-dung.html") Panasonic
+				figure.company-box
+					a(href="profile-nha-tuyen-dung.html").img
+						img(src='img/nha-tuyen-dung/beckers.jpg' alt='img/nha-tuyen-dung/beckers.jpg')
+					figcaption.mt-3.text-center
+						a(href="profile-nha-tuyen-dung.html") Beckers
 	section.job.totnhat.mb-6
 		.container
-			h2.job-title.text-center.mt-10 Việc làm tốt nhất
+			.h4.text-center.mt-10 Việc làm tốt nhất
 			.row
 				.col-lg-8
 					.swiper-container
@@ -240,7 +234,7 @@ block main
 						.job-pagination
 				.col-lg-4.pl-8-lg
 					.job.recommend
-						h6.job-title.text-center.m-0.py-3 Phù hợp với bạn
+						.job-title.text-bold.text-center.m-0.py-2 Phù hợp với bạn
 						ul.job-list2.unstyled-list
 							-for(var i = 0; i < 4; i++)
 								li

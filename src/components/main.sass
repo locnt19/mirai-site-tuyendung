@@ -379,25 +379,29 @@ main
 		justify-content: center
 		img
 			width: 100%
+			min-height: 250px
 	// text
 	.banner-container
 		z-index: 2
 		position: relative
 		max-width: 1200px
-		padding: 32px 24px
+		padding: 24px
 		background: rgba(0, 0, 0, .65)
 	&_title
 		color: #fff
 		text-shadow: 0 0 8px rgba(0, 0, 0, .5)
-		font-size: 28px
 		font-weight: 700
-		margin-bottom: 24px
+		font-size: 24px
+		margin-bottom: 16px
+		line-height: 1.25
 	&_subtitle
 		color: #fff
-		text-shadow: 0 0 8px rgba(0, 0, 0, .5)
-		font-size: 20px
+		text-shadow: 0 0 4px rgba(0, 0, 0, .5)
+		font-size: 18px
 		line-height: 1.25
-		margin-bottom: 32px
+		margin-bottom: 20px
+		p:not(:first-child)
+			margin-top: 12px
 	// form
 	&_search
 		width: 100%
@@ -440,9 +444,11 @@ main
 			position: absolute
 			box-shadow: 0 0 4px 0 #000
 			top: 100%
-			width: 100%
+			left: 0
+			// width: 100%
 			margin-top: 16px
 			background: #ffffff
+			z-index: 3
 			display: none
 			&.show
 				display: flex
@@ -452,12 +458,12 @@ main
 				font-size: 14px
 				margin-bottom: 16px
 			.item
+				font-size: 15px
 				margin-bottom: 8px
-				line-height: 1.25
+				line-height: 1.15
 				span:nth-of-type(2)
+					font-size: 12px
 					margin-left: 6px
-				a:hover
-					color: #007DC4
 			.recent
 				flex: 0 0 30%
 				padding: 16px
@@ -469,11 +475,14 @@ main
 					border: 1px solid silver
 					margin-right: 10px
 					margin-bottom: 10px
-					padding: 6px 12px
+					padding: 4px 12px
 					border-radius: 99px
+					transition: all .1s ease-in
 					&:hover
 						color: #fff
 						background: #007DC4
+						border-color: #007DC4
+						box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5)
 		&--close
 			font-size: 14px
 			width: 16px
@@ -567,6 +576,8 @@ main
 
 .company
 	&-box
+		padding: 9px 12px
+		margin: 0
 		.img
 			width: 160px
 			height: 160px
@@ -649,6 +660,7 @@ main
 		.job-box:first-of-type
 			box-shadow: none
 	&-xemthem
+		font-size: 14px
 		position: relative
 		padding-right: 20px
 		&:hover
@@ -686,14 +698,17 @@ main
 		position: absolute
 		top: 50%
 		transform: translateY(-50%)
-		width: 48px
-		height: 48px
+		width: 32px
+		height: 32px
 		display: flex
 		align-items: center
 		justify-content: center
 		transition: all .2s ease-in-out
 		visibility: hidden
 		opacity: 0
+		@media screen and ( min-width: 992px )
+			width: 48px
+			height: 48px
 	&-btn_prev
 		left: 16px
 	&-btn_next
@@ -702,8 +717,6 @@ main
 .vl
 	&-form
 		background: #007DC4
-		.container
-			padding: 12px
 	&-sort
 		display: flex
 		flex-wrap: wrap
@@ -865,11 +878,6 @@ main
 			&_posted
 				font-size: 0.75rem
 	@media screen and ( min-width: 768px )
-		&-form
-			margin-top: 16px
-			background: #f1f1f1
-			.container
-				background: #007DC4
 		&-sort
 			margin-top: 16px
 			&_title
