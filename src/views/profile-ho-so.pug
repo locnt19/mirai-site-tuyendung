@@ -25,14 +25,79 @@ block main
 				| Mức độ hoàn chỉnh hồ sơ:  
 				span.text-bold.fg-blue Chưa hoàn chỉnh
 		.profile-user_box.bg-white.border.border-left-none.bd-gray.my-4
+			a(href="#edit").profile-user_btn--edit
+				span.mdi.mdi-pencil
 			.d-flex.border-left.border-size-5.bd-blue.p-4
-				.profile-user_box--img.border.bd-gray.p-2.ml-2-md
+				.profile-user_box--img.border.bd-gray.p-1.p-2-md.ml-2-md
 					img(src="https://via.placeholder.com/150", alt="avatar")
-				.profile-user_box--info.ml-8-md
-					.sub-header.text-bold.fg-blue.mb-0 Nguyễn Thành Lộc
-					.text-secondary.mt-4
-						p.mt-0 Vị trí: Developer
-						p.mt-0 Công ty gần đây nhất: abc
-						p.mt-0 Bằng cấp cao nhất: Cao Đẳng Kỹ Thuật Cao Thắng
-				.profile-user_btn--edit.mdi.mdi-pencil
-		.profile-user_box.bg-white.border.border-left-none.bd-gray.my-4
+				.ml-4.ml-8-md
+					.sub-header.text-bold.fg-blue.mt-0.mb-2 Nguyễn Thành Lộc
+					.text-secondary.mt-4-md
+						p.mt-0 
+							strong Vị trí:  
+							span Developer
+						p.mt-0
+							strong Công ty gần đây nhất:  
+							span abc
+						p.mt-0
+							strong Công ty gần đây nhất:  
+							span abc
+						p.mt-0
+							strong Bằng cấp cao nhất:  
+							span Cao Đẳng Kỹ Thuật Cao Thắng
+		.profile-user_box.bg-white.border.bd-gray.my-4
+			.h6.border-bottom.bd-gray.bg-light.m-0.px-4.py-2
+				span.mdi.mdi-account
+				span.ml-2 Thông tin cá nhân
+			.p-4
+				a(href="#edit").profile-user_btn--edit
+					span.mdi.mdi-pencil
+				.row
+					.col-6.text-secondary
+						.text-bold Email
+						div locnt19@gmail.com
+					.col-6.text-secondary
+						.text-bold Ngày sinh
+						div 19/09/1998
+					.col-6.text-secondary
+						.text-bold Quốc tịch
+						div Việt Nam
+					.col-6.text-secondary
+						.text-bold Điện thoại
+						div 0123456789
+					.col-6.text-secondary
+						.text-bold Giới tính
+						div Nam
+					.col-6.text-secondary
+						.text-bold Tình trạng hôn nhân
+						div Độc thân
+		.profile-user_box.bg-white.border.bd-gray.my-4
+			.h6.border-bottom.bd-gray.bg-light.m-0.px-4.py-2
+				span.mdi.mdi-format-list-bulleted
+				span.ml-2 Thông tin chung
+			.p-4
+				p Giới thiệu bản thân và miêu tả mục tiêu nghề nghiệp của bạn
+		.profile-user_box.bg-white.border.bd-gray.my-4
+			.h6.border-bottom.bd-gray.bg-light.m-0.px-4.py-2
+				span.mr-2.mdi.mdi-star
+				span Kỹ năng
+			.bg-white.p-4
+				p Thêm kỹ năng nghề nghiệp đề nhận được những đề nghị công việc phù hợp hơn
+		.profile-user_box.bg-white.border.bd-gray.my-4
+			.h6.border-bottom.bd-gray.bg-light.m-0.px-4.py-2
+				span.mr-2.mdi.mdi-sprout
+				span Kinh nghiệm làm việc
+			.bg-white.p-4
+				p Mô tả kinh nghiệm làm việc của bạn càng chi tiết càng tốt, điều đó giúp bạn có cơ hội hiển thị nhiều hơn trong kết quả tìm kiếm
+		.profile-user_box.bg-white.border.bd-gray.my-4
+			.h6.border-bottom.bd-gray.bg-light.m-0.px-4.py-2
+				span.mr-2.mdi.mdi-folder-account
+				span Thông Tin Tham Khảo
+			.bg-white.p-4
+				p Cung cấp thông tin tham khảo về công ty bạn đã làm việc trước đây để nổi bật giữa đám đông
+		.profile-user_box.bg-white.border.bd-gray.my-4
+			.h6.border-bottom.bd-gray.bg-light.m-0.px-4.py-2
+				span.mr-2.mdi.mdi-medal
+				span Công Việc Mong Muốn 
+			.bg-white.p-4
+				p Cung cấp thông tin tham khảo về công ty bạn đã làm việc trước đây để nổi bật giữa đám đông

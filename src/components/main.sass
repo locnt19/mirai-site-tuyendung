@@ -16,7 +16,7 @@ a
 	text-decoration: none !important
 main
 	padding-top: 50px
-	// min-height: 900px
+	min-height: 100vh
 
 .viewmore
 	margin-top: 4px
@@ -49,6 +49,7 @@ main
 	z-index: 5
 	background: #fff
 	@media screen and ( max-width: 991.98px )
+		max-height: 75vh
 		.logo-wrapper
 			height: 50px
 			display: flex
@@ -56,7 +57,12 @@ main
 			justify-content: center
 			padding: 0 14px
 			transition: all .15s ease-in-out
-			box-shadow: 0 0 4px 0 #000
+			position: sticky
+			top: 0
+			z-index: 1
+			background: #fff
+			border-bottom: 1px solid rgba(0, 0, 0, .35)
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, .35)
 		&_logo
 			img
 				height: 40px
@@ -84,7 +90,7 @@ main
 				span::before
 					content: '\FB87'
 		&_link
-			margin-top: 16px
+			// margin-top: 16px
 			padding: 0 14px
 			position: absolute
 			width: 100%
@@ -94,7 +100,9 @@ main
 			visibility: hidden
 			&.left
 				right: calc(100% + 14px)
+				border: none
 			&.right
+				border-top: none
 				padding-top: 4px
 				padding-bottom: 14px
 				transition-delay: .2s
@@ -103,20 +111,33 @@ main
 				list-style: none
 				padding: 4px 0
 				&.language
+					border-top: 1px solid rgba(0, 0, 0, .35)
 					>a:first-child
 						display: none
 					.user-nav_sublink
 						display: flex
 						li
 							margin-right: 8px
+				&.logged
+					padding-top: 8px
+					border-top: 1px solid rgba(0, 0, 0, .35)
+					ul
+						.mdi
+							font-size: 16px
 		&_sublink
+			color: gray
 			margin: 0
+			margin-top: 4px
+			padding-left: 14px
+			font-size: .9rem
 			li:last-of-type
 				padding-bottom: 0
 		&.open
+			overflow-x: hidden
+			overflow-y: auto
 			box-shadow: 0 0 4px 0 #000
-			.logo-wrapper
-				box-shadow: none
+			// .logo-wrapper
+				// box-shadow: none
 			.user-nav_link
 				position: relative
 				opacity: 1
@@ -127,6 +148,7 @@ main
 				&.right
 					left: 0
 	@media screen and ( min-width: 992px )
+		height: 50px
 		padding: 0 32px
 		display: flex
 		align-items: center
@@ -135,7 +157,7 @@ main
 			display: none
 		&_logo
 			img
-				height: 50px
+				height: 45px
 		&_link
 			display: flex
 			&.left
@@ -173,6 +195,22 @@ main
 							padding-right: 10px
 							&::before
 								content: none
+				&.logged
+					.user-nav_sublink
+						right: 0
+						width: 220px
+						font-size: .875rem
+						padding-top: 0
+						.mdi
+							font-size: 18px
+						li
+							margin-bottom: 0
+							border-bottom: 1px solid rgba(0, 0, 0, .35)
+							a
+								padding: 8px
+								padding-left: 16px
+								&::before
+									content: none
 				&:hover
 					.user-nav_sublink
 						display: block
@@ -180,7 +218,7 @@ main
 					display: inline-block
 					padding: 4px 12px
 					border-radius: 4px
-					white-space: nowrap
+					// white-space: nowrap
 					&:hover,
 					&.active
 						color: #fff
@@ -196,6 +234,8 @@ main
 			padding-top: 8px
 			position: absolute
 			top: 100%
+			color: gray
+			font-size: .875rem
 			a
 				padding: 4px 8px
 				padding-left: 24px
@@ -1007,12 +1047,24 @@ main
 			overflow-y: auto
 	&-user
 		&_box
+			&:hover
+				@media screen and ( min-width: 768px )
+					.profile-user_btn--edit
+						opacity: 1
+						visibility: visible
 			&--img
+				flex: 0 0 64px
+				max-width: 64px
+				height: 64px
 				img
-					width: 150px
+					width: 100%
+					height: 100%
+				@media screen and ( min-width: 768px )
+					flex: 0 0 150px
+					max-width: 150px
 					height: 150px
 		&_btn--edit
-			cursor: pointer
+			z-index: 1
 			width: 30px
 			height: 30px
 			display: flex
@@ -1021,6 +1073,10 @@ main
 			position: absolute
 			top: 0
 			right: 0
+			transition: all .15s ease-in-out
+			@media screen and ( min-width: 768px )
+				opacity: 0
+				visibility: hidden
 .dsnn
 	&-wrapper
 		columns: 1
