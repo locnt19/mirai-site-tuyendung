@@ -8,60 +8,6 @@ block main
 		nav.breadcrumb.mt-4.mb-2
 			a.breadcrumb-step(href='index.html') Trang chủ
 			a.breadcrumb-step.breadcrumb-step_active(href='viec-lam.html') Việc làm
-	//- section.vl-form
-		.container
-			.row
-				form.banner-lc_search
-					input.banner-lc_search--input(
-						name="query"
-						type="text"
-						data-role="input"
-						placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty,..."
-						data-prepend="<span class='mdi mdi-magnify'></span>"
-						data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
-					select.banner-lc_search--select(
-						name="dia-diem"
-						data-role="select"
-						data-duration="0")
-						option(value="all") Tất cả địa điểm
-						option(value="brvt") Bà Rịa - Vũng Tàu
-						option(value="hn") Hà Nội
-						option(value="hcm") Hồ Chí Minh
-					button(type="submit").button.banner-lc_search--button Tìm ngay
-				.banner-lc_search--recent
-					.banner-lc_search--close.mdi.mdi-close
-					.recent
-						.title TÌM KIẾM GẦN ĐÂY
-						.content
-							.item
-								span
-									a(href="viec-lam.html") brand manager brand manager brand manager
-								span (47 việc làm)
-							.item
-								span
-									a(href="viec-lam.html") brand manager brand manager brand manager
-								span (47 việc làm)
-					.recommend
-						.title TỪ KHÓA PHỔ BIẾN
-						.content
-							a(href="viec-lam.html").item
-								span brand manager
-								span (Bán hàng)
-							a(href="viec-lam.html").item
-								span Giám sát bán hàng
-								span (Bán hàng)
-							a(href="viec-lam.html").item
-								span Account Executive
-								span (Marketing)
-							a(href="viec-lam.html").item
-								span Kết toán tổng hợp
-								span (Ngân hàng)
-							a(href="viec-lam.html").item
-								span Project manager
-								span (IT - Phần mềm)
-							a(href="viec-lam.html").item
-								span Frontend developer
-								span (IT - Phần mềm)
 	section.vl-list_wrapper.container.mt-4
 		.row
 			.col-12.vl-form
@@ -135,7 +81,7 @@ block main
 						data-template="<span class='mdi mdi-sort-descending'></span> $1") Mức lương giảm dần
 		.row.flex-wrap-r.flex-wrap-lg
 			.col-lg-9
-				ul#vieclam_list.vl-list.unstyled-list.mr-0(
+				ul#vieclam_list.vl-list.mx-0(
 					data-role="list"
 					data-show-pagination="true"
 					data-items="8"
@@ -334,7 +280,7 @@ block main
 										.vl-company_name.mb-1
 											a(href="profile-nha-tuyen-dung.html") LG Development Center Vietnam
 										.vl-company_location.text-secondary.text-center.mb-4 Hồ Chí Minh
-										ul.vl-company_job.unstyled-list.m-0
+										ul.vl-company_job.m-0
 											li.vl-company_job--item
 												.text-bold
 													a(href="chi-tiet-1-viec-lam.html") Android Developer (Up to $2,000)
@@ -367,7 +313,7 @@ block main
 						)
 							button.vl-tree_btn--removeFilter
 								span reset filters
-							ul.vl-tree_list.dia-diem.unstyled-list.m-0
+							ul.vl-tree_list.dia-diem.m-0
 								li
 									input(
 										type="radio"

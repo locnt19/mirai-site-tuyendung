@@ -122,7 +122,7 @@ function ViewMore() {
 
 	var vlTreeListDiaDiemContainer = $('.vl-tree_list.dia-diem');
 	var vlTreeListDiaDiemItem = $('.vl-tree_list.dia-diem li');
-	ViewMore_Items('hide', vlTreeListDiaDiemItem, 34, vlTreeListDiaDiemItem.length);
+	ViewMore_Items('hide', vlTreeListDiaDiemItem, 4, vlTreeListDiaDiemItem.length);
 	ViewMore_HandlerEvent(vlTreeListDiaDiemContainer, vlTreeListDiaDiemItem, 4);
 }
 
