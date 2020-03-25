@@ -1,0 +1,66 @@
+extends _layout.pug
+
+block var
+	- var title = 'Hỗ trợ miễn phí cho ứng viên'
+
+block main
+	section.container.px-6.px-3-sm.mb-8
+		.row.h4 Liên hệ
+		.row.bg-white(style="box-shadow: 0 0 4px 0 rgba(0, 0, 0, .35)")
+			.col-lg-6.p-8
+				.pb-2.mt-3.border-bottom.bd-gray
+					span.text-secondary Gửi đến:
+					span.text-bold.fg-blue.ml-2 Công Ty TNHH Mirai Tuyển dụng
+				form.text-secondary.mt-4(action="javascript:")
+					.mb-3
+						.mb-1
+							span Tiêu đề
+							span.fg-red.text-bold.ml-1 *
+						input.login-input(type="text" placeholder="Nhập tối đa không quá 100 ký tự")
+					.mb-3
+						.mb-1
+							span Nội dung ý kiến
+							span.fg-red.text-bold.ml-1 *
+						input.login-input(type="text" placeholder="Nhập tối đa không quá 500 ký tự")
+					.mb-3
+						.mb-1
+							span Người liên hệ
+							span.fg-red.text-bold.ml-1 *
+						input.login-input(type="text" placeholder="Họ và tên của người liên hệ")
+					.mb-3
+						.mb-1
+							span Địa chỉ
+							span.fg-red.text-bold.ml-1 *
+						input.login-input(type="text" placeholder="Nhập tối đa không quá 100 ký tự")
+					.mb-3
+						.mb-1
+							span Điện thoại
+						input.login-input(type="text" placeholder="Không bắt buộc")
+					.mb-3
+						.mb-1
+							span Fax
+						input.login-input(type="text" placeholder="Không bắt buộc")
+					.mb-3
+						.mb-1
+							span Email
+							span.fg-red.text-bold.ml-1 *
+						input.login-input(type="text" placeholder="Nhập email để chúng tôi phản hồi")
+					.text-right
+						input.text-bold.bg-blue.fg-white.px-10(type="submit" value="GỬI")
+			.col-lg-6.px-8.pb-8.pt-8-lg
+				.h6.my-0.mt-3-md Thông tin liên hệ
+				.text-secondary.fg-darkGray.mt-3
+					.d-flex
+						span.mdi.mdi-home.mr-2
+						span 155 Trần Trọng Cung, P. Tân Thuận Đông, Q7, HCM
+					.d-flex
+						span.mdi.mdi-phone.mr-2
+						span (+84) 28 3873 3268
+					.d-flex
+						span.mdi.mdi-fax.mr-2
+						span (+84) 28 3873 3268
+					.d-flex
+						span.mdi.mdi-email.mr-2
+						span contact@miraihuman.com
+				.google-maps.mt-4
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6592.508254242511!2d106.73368274013711!3d10.739966249079377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175257802175f77%3A0xc66eb0394d7b9fcb!2sMirai%20Human!5e0!3m2!1svi!2s!4v1585111047585!5m2!1svi!2s" width="100%" height="350px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")

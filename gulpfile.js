@@ -122,7 +122,7 @@ gulp.task('css', function () {
 			prefixer({
 				cascade: false,
 			}),
-			cssnano(),
+			// cssnano(),
 			cssDeclarationSorter({
 				order: 'smacss'
 			})
@@ -190,7 +190,7 @@ gulp.task('serve', function () {
 		gulp.watch('./dist/*').on('change', browserSync.reload)
 })
 
-// Gulp task defaul
+// Gulp task default
 gulp.task('default', gulp.series(
 	'clean',
 	'copyImages',
