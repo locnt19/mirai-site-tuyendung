@@ -11,57 +11,7 @@ block main
 	section.container.mt-4
 		.row
 			.col-12.vl-form
-				form.banner-lc_search
-					input.banner-lc_search--input(
-						name="query"
-						type="text"
-						data-role="input"
-						placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty,..."
-						data-prepend="<span class='mdi mdi-magnify'></span>"
-						data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
-					select.banner-lc_search--select(
-						name="dia-diem"
-						data-role="select"
-						data-duration="0")
-						option(value="all") Tất cả địa điểm
-						option(value="brvt") Bà Rịa - Vũng Tàu
-						option(value="hn") Hà Nội
-						option(value="hcm") Hồ Chí Minh
-					button(type="submit").button.banner-lc_search--button Tìm ngay
-				.banner-lc_search--recent
-					.banner-lc_search--close.mdi.mdi-close
-					.recent
-						.title TÌM KIẾM GẦN ĐÂY
-						.content
-							.item
-								span
-									a(href="viec-lam.html") brand manager brand manager brand manager
-								span (47 việc làm)
-							.item
-								span
-									a(href="viec-lam.html") brand manager brand manager brand manager
-								span (47 việc làm)
-					.recommend
-						.title TỪ KHÓA PHỔ BIẾN
-						.content
-							a(href="viec-lam.html").item
-								span brand manager
-								span (Bán hàng)
-							a(href="viec-lam.html").item
-								span Giám sát bán hàng
-								span (Bán hàng)
-							a(href="viec-lam.html").item
-								span Account Executive
-								span (Marketing)
-							a(href="viec-lam.html").item
-								span Kết toán tổng hợp
-								span (Ngân hàng)
-							a(href="viec-lam.html").item
-								span Project manager
-								span (IT - Phần mềm)
-							a(href="viec-lam.html").item
-								span Frontend developer
-								span (IT - Phần mềm)
+				include ../components/form-search/index.pug
 		.row.mt-4
 			.col-lg-8.col-xl-9
 				.profile-content.p-4

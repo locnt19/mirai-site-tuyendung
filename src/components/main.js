@@ -9,7 +9,44 @@ $(document).ready(function () {
 	ViewMore();
 	InfoBox_Event();
 
+	LazyLoadFunction();
 });
+
+function LazyLoadFunction() {
+	// function logElementEvent(eventName, element) {
+	// 	console.log(Date.now(), eventName, element.getAttribute("data-src"));
+	// }
+	// var callback_enter = function (element) {
+	// 	logElementEvent("🔑 ENTERED", element);
+	// };
+	// var callback_exit = function (element) {
+	// 	logElementEvent("🚪 EXITED", element);
+	// };
+	// var callback_loading = function (element) {
+	// 	logElementEvent("⌚ LOADING", element);
+	// };
+	// var callback_loaded = function (element) {
+	// 	logElementEvent("👍 LOADED", element);
+	// };
+	// var callback_error = function (element) {
+	// 	logElementEvent("💀 ERROR", element);
+	// 	element.src = `https://via.placeholder.com/256/?text=Not found`;
+	// };
+	// var callback_finish = function () {
+	// 	logElementEvent("✔️ FINISHED", document.documentElement);
+	// };
+	var lazyLoad = new LazyLoad({
+		elements_selector: ".lazy",
+		// Assign the callbacks defined above
+		// callback_enter: callback_enter,
+		// callback_exit: callback_exit,
+		// callback_loading: callback_loading,
+		// callback_loaded: callback_loaded,
+		// callback_error: callback_error,
+		// callback_finish: callback_finish
+	});
+	lazyLoad.update();
+}
 
 function BackToTop() {
 	$(window).scroll(function () {
@@ -32,7 +69,7 @@ function ToggleUserNav() {
 };
 
 function ShowHideSearchRecent() {
-	$('.banner-lc_search--input input').on('focusin', function () {
+	$('.banner-lc_search--input').on('focusin', function () {
 		$('.banner-lc_search--recent').addClass('show');
 	});
 	$('.banner-lc_search--close').on('click', function () {
@@ -43,6 +80,7 @@ function ShowHideSearchRecent() {
 function SlideSwiper() {
 	const banner_lc = new Swiper('.banner-lc .swiper-container', {
 		effect: 'fade',
+		lazy: true,
 		loop: true,
 		autoplay: {
 			delay: 3000,
@@ -56,6 +94,7 @@ function SlideSwiper() {
 	});
 	const job_totnhat = new Swiper('.job.totnhat .swiper-container', {
 		spaceBetween: 32,
+		lazy: true,
 		loop: true,
 		autoplay: {
 			delay: 10000,
@@ -69,6 +108,7 @@ function SlideSwiper() {
 	});
 	const job_banner = new Swiper('.job.banner .swiper-container', {
 		loop: true,
+		lazy: true,
 		autoplay: {
 			delay: 12000,
 			disableOnInteraction: false,
@@ -81,6 +121,7 @@ function SlideSwiper() {
 	});
 	const vl_company = new Swiper('.vl-company .swiper-container', {
 		spaceBetween: 16,
+		lazy: true,
 		loop: true,
 		autoplay: {
 			delay: 4000,
@@ -97,10 +138,10 @@ function SlideSwiper() {
 function FilterListViecLam() {
 	$('.vl-tree_content input:radio').on('change', function () {
 		$('.vl-tree_btn--removeFilter').addClass('d-flex');
-		if ($(this).is(':checked')) {
-			console.log('filter');
-			$('#vieclam_list').data('list').filter(this.value);
-		}
+		// if ($(this).is(':checked')) {
+		// 	console.log('filter');
+		// 	$('#vieclam_list').data('list').filter(this.value);
+		// }
 	});
 }
 
@@ -108,7 +149,7 @@ function ResetFilterListViecLam() {
 	$('.vl-tree_btn--removeFilter').click(function (e) {
 		e.preventDefault();
 		console.log('reset filters');
-		$('#vieclam_list').data('list').filter('');
+		// $('#vieclam_list').data('list').filter('');
 		$('.vl-tree_content input:radio').prop('checked', false);
 		$('.vl-tree_btn--removeFilter').removeClass('d-flex');
 	});

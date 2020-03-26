@@ -11,96 +11,28 @@ block main
 	section.vl-list_wrapper.container.mt-4
 		.row
 			.col-12.vl-form
-				form.banner-lc_search
-					input.banner-lc_search--input(
-						name="query"
-						type="text"
-						data-role="input"
-						placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty,..."
-						data-prepend="<span class='mdi mdi-magnify'></span>"
-						data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
-					select.banner-lc_search--select(
-						name="dia-diem"
-						data-role="select"
-						data-duration="0")
-						option(value="all") Tất cả địa điểm
-						option(value="brvt") Bà Rịa - Vũng Tàu
-						option(value="hn") Hà Nội
-						option(value="hcm") Hồ Chí Minh
-					button(type="submit").button.banner-lc_search--button Tìm ngay
-				.banner-lc_search--recent
-					.banner-lc_search--close.mdi.mdi-close
-					.recent
-						.title TÌM KIẾM GẦN ĐÂY
-						.content
-							.item
-								span
-									a(href="viec-lam.html") brand manager brand manager brand manager
-								span (47 việc làm)
-							.item
-								span
-									a(href="viec-lam.html") brand manager brand manager brand manager
-								span (47 việc làm)
-					.recommend
-						.title TỪ KHÓA PHỔ BIẾN
-						.content
-							a(href="viec-lam.html").item
-								span brand manager
-								span (Bán hàng)
-							a(href="viec-lam.html").item
-								span Giám sát bán hàng
-								span (Bán hàng)
-							a(href="viec-lam.html").item
-								span Account Executive
-								span (Marketing)
-							a(href="viec-lam.html").item
-								span Kết toán tổng hợp
-								span (Ngân hàng)
-							a(href="viec-lam.html").item
-								span Project manager
-								span (IT - Phần mềm)
-							a(href="viec-lam.html").item
-								span Frontend developer
-								span (IT - Phần mềm)
+				include ../components/form-search/index.pug
 		.row
 			.col-lg-9.vl-sort.mt-6
 				h5.vl-sort_title.text-bold.m-0 Lập trình viên
 					span.vl-sort_count.text-secondary.text-bold.ml-2 1,962
-				a.vl-sort_btn--newest(onClick="$('#vieclam_list').data('list').sorting('vl-list_posted', 'desc', true)") Tin mới nhất
+				a(href="#").vl-sort_btn--newest Tin mới nhất
 				select.vl-sort_select.no-user-select(
 					data-role="select"
 					data-filter="false"
 					data-duration="0"
-					data-on-change="$('#vieclam_list').data('list').sorting('job-luong', this.value, true)"
 					)
-					option(
-						value="asc"
-						data-template="<span class='mdi mdi-sort-ascending'></span> $1") Mức lương tăng dần
-					option(
-						value="desc"
-						data-template="<span class='mdi mdi-sort-descending'></span> $1") Mức lương giảm dần
+					option Mức lương tăng dần
+					option Mức lương giảm dần
 		.row.flex-wrap-r.flex-wrap-lg
 			.col-lg-9
-				ul#vieclam_list.vl-list.mx-0(
-					data-role="list"
-					data-show-pagination="true"
-					data-items="8"
-					data-show-list-info="true"
-					data-list-info-title="Hiển thị $1 đến $2 trong $3 việc làm"
-					data-pagination-prev-title="Quay lại"
-					data-pagination-next-title="Kế tiếp"
-					data-activity-type="simple"
-					data-activity-style="dark"
-					data-cls-list-bottom="vl-list_bottom"
-					data-cls-list-info="vl-list_info"
-					data-cls-list-pagination="vl-list_pagination"
-					)
-					-for(var i = 0; i < 100; i++)
+				ul.vl-list.mx-0
+					-for(var i = 0; i < 1; i++)
 						li
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+										img.lazy(data-src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
@@ -121,7 +53,7 @@ block main
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+										img.lazy(data-src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
@@ -142,7 +74,7 @@ block main
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+										img.lazy(data-src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
@@ -163,7 +95,7 @@ block main
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+										img.lazy(data-src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
@@ -184,7 +116,7 @@ block main
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+										img.lazy(data-src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="Accounting Officer (Aeonmall Tân Phú)") Accounting Officer (Aeonmall Tân Phú)
@@ -205,7 +137,7 @@ block main
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
+										img.lazy(data-src="img/nha-tuyen-dung/vinfast.png", alt="vinfast.png")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)") Trưởng Phòng Dịch Vụ Showroom (Toàn Quốc - 22 Vị Trí)
@@ -226,7 +158,7 @@ block main
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
+										img.lazy(data-src="img/nha-tuyen-dung/nexon-network-vina.png", alt="nexon-network-vina.png")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="HR Specialist (Recruitment, C&B)") HR Specialist (Recruitment, C&B)
@@ -247,7 +179,7 @@ block main
 							article.vl-list_box.job-box
 								.img
 									a(href="profile-nha-tuyen-dung.html")
-										img(src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
+										img.lazy(data-src="img/nha-tuyen-dung/vinhomes.png", alt="vinhomes.png")
 								.info
 									.job-box_title.text-bold
 										a(href="chi-tiet-1-viec-lam.html" title="[Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản") [Vinhomes] Chuyên Viên Kinh Doanh Bất Động Sản
@@ -264,6 +196,20 @@ block main
 									.vl-list_posted.text-small
 										span.mdi.mdi-clock-check-outline
 										span.ml-1 24/02/2020
+				.vl-list_info
+					span Hiển thị 1 đến 8 trong 8 việc làm
+				.vl-list_pagination
+					ul.pagination
+						li.page-item.prev-page.disabled
+							a.page-link Quay lại
+						li.page-item.active
+							a.page-link 1
+						li.page-item
+							a.page-link 2
+						li.page-item
+							a.page-link 3
+						li.page-item.next-page.disabled
+							a.page-link Kế tiếp
 			.col-lg-3.mt-4.pl-4-lg
 				.vl-company.mb-4
 					.vl-company_title CÔNG TY NỔI BẬT
@@ -274,9 +220,9 @@ block main
 									.vl-company_box
 										.vl-company_image
 											a(href="chi-tiet-1-viec-lam.html").vl-company_headline
-													img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg-development")
+													img.swiper-lazy(data-src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg-development")
 											a(href="profile-nha-tuyen-dung.html").vl-company_logo
-												img(src="img/nha-tuyen-dung/lg.png", alt="lg-company")
+												img.swiper-lazy(data-src="img/nha-tuyen-dung/lg.png", alt="lg-company")
 										.vl-company_name.mb-1
 											a(href="profile-nha-tuyen-dung.html") LG Development Center Vietnam
 										.vl-company_location.text-secondary.text-center.mb-4 Hồ Chí Minh

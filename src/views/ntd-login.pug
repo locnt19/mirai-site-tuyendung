@@ -6,9 +6,8 @@ block var
 block main
 	section.container.ntd-login_wrapper
 		form(
-			action="javascript:void"
+			action="javascript:"
 			method="post"
-			data-role="validator"
 			).ntd-login_form
 			.h5.text-center.mt-4.mb-2.mx-4 Đăng nhập
 			.pt-0.pb-4.px-0
@@ -17,17 +16,15 @@ block main
 						type="text"
 						name="dn_email"
 						placeholder="Email"
-						data-validate="minlength=1"
 					)
-					span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập email
+					//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập email
 				p.mt-3
 					input.login-input(
 						type="password"
 						name="dn_matkhau"
 						placeholder="Mật khẩu"
-						data-validate="minlength=1"
 						)
-					span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập mật khẩu
+					//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập mật khẩu
 				p.d-none.login-notifications.text-bold.text-small.fg-red.mt-2
 					span Sai tài khoản hoặc mật khẩu
 				p.mt-1.text-small

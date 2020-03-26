@@ -14,66 +14,16 @@ block main
 		.row
 			.col-12
 				.vl-form.p-2
-					form.banner-lc_search
-						input.banner-lc_search--input(
-							name="query"
-							type="text"
-							data-role="input"
-							placeholder="Tìm kiếm theo kỹ năng, chức vụ, công ty,..."
-							data-prepend="<span class='mdi mdi-magnify'></span>"
-							data-clear-button-icon="<span class='mdi mdi-delete-circle-outline'></span>")
-						select.banner-lc_search--select(
-							name="dia-diem"
-							data-role="select"
-							data-duration="0")
-							option(value="all") Tất cả địa điểm
-							option(value="brvt") Bà Rịa - Vũng Tàu
-							option(value="hn") Hà Nội
-							option(value="hcm") Hồ Chí Minh
-						button(type="submit").button.banner-lc_search--button Tìm ngay
-					.banner-lc_search--recent
-						.banner-lc_search--close.mdi.mdi-close
-						.recent
-							.title TÌM KIẾM GẦN ĐÂY
-							.content
-								.item
-									span
-										a(href="viec-lam.html") brand manager brand manager brand manager
-									span (47 việc làm)
-								.item
-									span
-										a(href="viec-lam.html") brand manager brand manager brand manager
-									span (47 việc làm)
-						.recommend
-							.title TỪ KHÓA PHỔ BIẾN
-							.content
-								a(href="viec-lam.html").item
-									span brand manager
-									span (Bán hàng)
-								a(href="viec-lam.html").item
-									span Giám sát bán hàng
-									span (Bán hàng)
-								a(href="viec-lam.html").item
-									span Account Executive
-									span (Marketing)
-								a(href="viec-lam.html").item
-									span Kết toán tổng hợp
-									span (Ngân hàng)
-								a(href="viec-lam.html").item
-									span Project manager
-									span (IT - Phần mềm)
-								a(href="viec-lam.html").item
-									span Frontend developer
-									span (IT - Phần mềm)
+					include ../components/form-search/index.pug
 		.row.ctvl-company_headline.mt-4
 			.col-12
 				a(href="profile-nha-tuyen-dung.html")
-					img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg")
+					img.lazy(data-src="img/headline/lg-development-center-vietnam-headline_photo.jpg" alt="company_headline")
 		.row.mt-4
 			.col-12
 				.ctvl-company_box.d-flex.flex-align-center.p-4
 					a(href="profile-nha-tuyen-dung.html").ctvl-company_logo.d-flex.flex-align-center.flex-justify-center
-							img(src="img/nha-tuyen-dung/lg.png", alt="lg")
+						img.lazy(data-src="img/nha-tuyen-dung/lg.png" alt="company_logo")
 					.ctvl-company_info
 						h1.ctvl-company_title.mb-2 Software Development Part Leader
 						p.mb-2.text-bold
@@ -144,24 +94,24 @@ block main
 							article.job-box.flex-align-start.p-2
 								strong.no-wrap.mr-2 Nơi làm việc:
 								p.mt-0
-									a(href="#").mr-1 Hà Nội,
-									a(href="#").mr-1 Hồ Chí Minh,
-									a(href="#").mr-1 Hà Nội,
-									a(href="#").mr-1 Hồ Chí Minh
+									a(href="viec-lam.html").mr-1 Hà Nội,
+									a(href="viec-lam.html").mr-1 Hồ Chí Minh,
+									a(href="viec-lam.html").mr-1 Hà Nội,
+									a(href="viec-lam.html").mr-1 Hồ Chí Minh
 				.job.recommend
 					.job-title.text-bold.text-center.m-0.py-2 Phù hợp với bạn
 					ul.job-list2.px-2.pb-2
-						-for(var i = 0; i < 8; i++)
+						-for(var i = 0; i < 5; i++)
 							li
 								article.job-box
 									.img
-										a(href="#")
-											img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+										a(href="profile-nha-tuyen-dung.html")
+											img.lazy(data-src="img/nha-tuyen-dung/aeon-mall.webp" alt="aeon-mall.webp")
 									.info
 										.job-box_title.text-bold
-											a(href="#") Accounting Officer (Aeonmall Tân Phú)
+											a(href="chi-tiet-1-viec-lam") Accounting Officer (Aeonmall Tân Phú)
 										.job-box_subtitle.text-small
-											a(href="#") AEONMALL Vietnam Co., Ltd
+											a(href="profile-nha-tuyen-dung.html") AEONMALL Vietnam Co., Ltd
 										.d-flex
 											.job-luong.text-small.text-bold Thương lượng
 											.job-diadiem.text-small.ml-4

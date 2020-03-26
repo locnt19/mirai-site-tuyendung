@@ -1,7 +1,6 @@
 const del = require('del')
 gulp = require('gulp')
 pug = require('gulp-pug')
-// Fiber = require('fibers')
 sass = require('gulp-sass')
 cssnano = require('cssnano')
 babel = require('gulp-babel')
@@ -15,10 +14,10 @@ prefixer = require('autoprefixer')
 srcmap = require('gulp-sourcemaps')
 cssImport = require('gulp-cssimport')
 sassUnicode = require('gulp-sass-unicode')
+image = require('gulp-image')
 cssDeclarationSorter = require('css-declaration-sorter')
 browserSync = require('browser-sync').create()
 readFileSync = require('graceful-fs').readFileSync
-// sass.compiler = require('node-sass');
 
 
 // Task clean
@@ -47,6 +46,7 @@ gulp.task('cleanImages', function () {
 // Task copy images
 gulp.task('copyImages', function () {
 	return gulp.src('./src/assets/images/**/**.{svg,gif,png,jpg,jpeg,webp}')
+		.pipe(image())
 		.pipe(gulp.dest('./dist/img'));
 })
 
@@ -115,14 +115,13 @@ gulp.task('css', function () {
 		})
 		.pipe(srcmap.init())
 		.pipe(sass.sync({
-			// fiber: Fiber
 		}).on('error', sass.logError))
 		.pipe(sassUnicode())
 		.pipe(postcss([
 			prefixer({
 				cascade: false,
 			}),
-			// cssnano(),
+			cssnano(),
 			cssDeclarationSorter({
 				order: 'smacss'
 			})

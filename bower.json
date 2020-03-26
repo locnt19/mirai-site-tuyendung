@@ -19,6 +19,7 @@
     "swiper": "^5.3.6",
     "jquery": "^3.4.1",
     "mdi": "^4.9.95",
-    "metro": "^4.3.5"
+    "metro": "^4.3.5",
+    "vanilla-lazyload": "^14.0.0"
   }
 }

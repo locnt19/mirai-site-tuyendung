@@ -9,9 +9,8 @@ block main
 			.col-lg-8
 				.profile-content.p-4
 					form(
-						action="javascript:void"
+						action="javascript:"
 						method="post"
-						data-role="validator"
 						)
 						.h5.m-0 Thông tin đăng ký
 						.login-line.z-1
@@ -24,9 +23,8 @@ block main
 									type="text"
 									name="dky_email"
 									placeholder="Email"
-									data-validate="minlength=1"
 								)
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập email hợp lệ
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập email hợp lệ
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Mật khẩu:
@@ -36,9 +34,8 @@ block main
 									type="password"
 									name="dky_matkhau1"
 									placeholder="Mật khẩu"
-									data-validate="minlength=1"
 									)
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập mật khẩu hợp lệ
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập mật khẩu hợp lệ
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Nhập lại mật khẩu:
@@ -48,9 +45,8 @@ block main
 									type="password"
 									name="dky_matkhau2"
 									placeholder="Nhập lại mật khẩu"
-									data-validate="minlength=1 compare=dky_matkhau1"
 									)
-								span.invalid_feedback.text-bold.text-small.fg-red Mật khẩu không khớp
+								//- span.invalid_feedback.text-bold.text-small.fg-red Mật khẩu không khớp
 						.login-line.z-1.mt-4
 						.h5.mt-0.mb-2 Thông tin Nhà tuyển dụng
 						.row
@@ -62,9 +58,8 @@ block main
 									type="text"
 									name="dky_name"
 									placeholder="Họ và tên"
-									data-validate="minlength=1"
 								)
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập họ và tên
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập họ và tên
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Số điện thoại cá nhân:
@@ -74,25 +69,20 @@ block main
 									type="text"
 									name="dky_phone"
 									placeholder="Số điện thoại"
-									data-validate="length=10 number"
 								)
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập số điện thoại gồm 10 chữ số
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập số điện thoại gồm 10 chữ số
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Giới tính:
 									span.fg-red.ml-1 *
 							.col-md-9
 								select.login-input(
-									data-role="select"
-									data-filter="false"
-									data-duration="0"
 									name="dky_gioitinh"
-									data-validate="not=-1"
 								)
-									option(value="-1" selected).d-none -- Chọn giới tính --
+									option(value="-1" selected).d-none Chọn giới tính
 									option(value="0") Nam
 									option(value="1") Nữ
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn giới tính của bạn
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn giới tính của bạn
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Công ty:
@@ -102,22 +92,17 @@ block main
 									type="text"
 									name="dky_company"
 									placeholder="Số điện thoại"
-									data-validate="minlength=1"
 								)
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập số điện thoại gồm 10 chữ số
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập số điện thoại gồm 10 chữ số
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Chức vụ:
 									span.fg-red.ml-1 *
 							.col-md-9
 								select.login-input(
-									data-role="select"
-									data-filter="false"
-									data-duration="0"
 									name="dky_gioitinh"
-									data-validate="not=-1"
 								)
-									option(value="-1" selected).d-none -- Chọn chức vụ của bản thân --
+									option(value="-1" selected).d-none Chọn chức vụ của bản thân
 									option(value="0") Nhân viên
 									option(value="1") Trưởng nhóm
 									option(value="2") Phó phòng
@@ -126,50 +111,42 @@ block main
 									option(value="5") Giám Đốc
 									option(value="6") Tổng giám đốc
 									option(value="7") Chủ tịch
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn giới tính của bạn
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn giới tính của bạn
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Địa chỉ làm việc:
 									span.fg-red.ml-1 *
-							.col-md-9.d-flex.flex-wrap
-								.col-sm-4
-									input.login-input(
-									type="text"
-									name="dky_address1"
-									placeholder="Số nhà / tên đường"
-									data-validate="minlength=1"
-								)
-									span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập Số nhà, tên đường nơi làm việc
-								.col-sm-4
-									select.login-input(
-										data-role="select"
-										data-filter="false"
-										data-duration="0"
-										name="dky_address2"
-										data-validate="not=-1"
+							.col-md-9
+								.row.flex-wrap
+									.col-sm-4
+										input.login-input(
+										type="text"
+										name="dky_address1"
+										placeholder="Số nhà / tên đường"
 									)
-										option(value="-1" selected).d-none -- Chọn tỉnh / thành phố --
-										option(value="0") Hà Nội
-										option(value="1") Hồ Chí Minh
-										option(value="2") Bình Dương
-										option(value="3") Bắc Ninh
-										option(value="4") Đồng Nai
-									span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn tỉnh / thành phố
-								.col-sm-4
-									select.login-input(
-										data-role="select"
-										data-filter="false"
-										data-duration="0"
-										name="dky_address3"
-										data-validate="not=-1"
-									)
-										option(value="-1" selected).d-none -- Chọn quận / huyện --
-										option(value="0") Hà Nội
-										option(value="1") Hồ Chí Minh
-										option(value="2") Bình Dương
-										option(value="3") Bắc Ninh
-										option(value="4") Đồng Nai
-									span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn quận / huyện
+										//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng nhập Số nhà, tên đường nơi làm việc
+									.col-sm-4
+										select.login-input(
+											name="dky_address2"
+										)
+											option(value="-1" selected).d-none Chọn tỉnh / thành phố
+											option(value="0") Hà Nội
+											option(value="1") Hồ Chí Minh
+											option(value="2") Bình Dương
+											option(value="3") Bắc Ninh
+											option(value="4") Đồng Nai
+										//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn tỉnh / thành phố
+									.col-sm-4
+										select.login-input(
+											name="dky_address3"
+										)
+											option(value="-1" selected).d-none Chọn quận / huyện
+											option(value="0") Hà Nội
+											option(value="1") Hồ Chí Minh
+											option(value="2") Bình Dương
+											option(value="3") Bắc Ninh
+											option(value="4") Đồng Nai
+										//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn quận / huyện
 						.row
 							.col-md-3.pb-0
 								.text-secondary.text-bold Skype:
@@ -196,7 +173,7 @@ block main
 									option(value="3") Cồng nghệ cao
 									option(value="4") Bất động sản
 									option(value="5") Điện / Điện tử
-								span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn tỉnh / thành phố
+								//- span.invalid_feedback.text-bold.text-small.fg-red Vui lòng chọn tỉnh / thành phố
 						.row
 							.col-md-9.offset-md-3
 								p.mt-3.text-small.d-flex.flex-wrap.flex-align-start
@@ -204,7 +181,6 @@ block main
 										data-cls-checkbox="login-checkbox"
 										data-role="checkbox"
 										data-style="1"
-										data-validate="required"
 									)
 									span.w-100.invalid_feedback.text-bold.fg-red.order-3 Bạn chưa đồng ý với điều khoản dịch vụ của Mirai Tuyển dụng
 									span.col.p-0.order-2

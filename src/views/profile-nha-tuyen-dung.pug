@@ -7,11 +7,11 @@ block main
 	include ../components/breadcrumb/index.pug
 	section.container.mt-6.p-0-sm
 		.ctvl-company_headline
-			img(src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg")
+			img.lazy(data-src="img/headline/lg-development-center-vietnam-headline_photo.jpg", alt="lg")
 	section.container.mt-6.p-0-sm
 		.ctvl-company_box.d-flex.flex-align-center.p-4
 			.ctvl-company_logo.d-flex.flex-align-center.flex-justify-center
-				img(src="img/nha-tuyen-dung/lg.png", alt="lg")
+				img.lazy(data-src="img/nha-tuyen-dung/lg.png", alt="lg")
 			.ctvl-company_info
 				h1.ctvl-company_title.mb-2 LG Electronics Vietnam
 				p.mt-0
@@ -26,7 +26,7 @@ block main
 				p.mt-0
 					span.h6.m-0.mdi.mdi-calendar-clock
 					span.ml-3 Thứ 2 - Thứ 6
-			.ctvl-company_actions
+			.ctvl-company_actions.flex-nowrap
 				button.ctvl-btn_ungtuyen#btn-danhgia Đánh giá
 				button.ctvl-btn_luu
 					span.mdi.mdi-heart-outline.mr-1
@@ -43,21 +43,8 @@ block main
 				.profile-item
 					.profile-title 19 Đánh giá
 					.profile-content.p-4.mt-3
-						ul.m-0(
-							data-role="list"
-							data-items="3"
-							data-sort-dir="desc"
-							data-sort-class="posted"
-							data-show-pagination="true"
-							data-pagination-prev-title="Quay lại"
-							data-pagination-next-title="Kế tiếp"
-							data-activity-type="simple"
-							data-activity-style="dark"
-							data-cls-list-bottom="vl-list_bottom"
-							data-cls-list-info="vl-list_info"
-							data-cls-list-pagination="vl-list_pagination"
-							)
-							-for(var i = 0; i < 3; i++)
+						ul.m-0
+							-for(var i = 0; i < 1; i++)
 								li
 									.profile-review_box
 										.profile-review_title Môi trường làm việc hiện đại, thân thiện
@@ -117,15 +104,27 @@ block main
 											p Công ty khá nhiều Benefit cho nhân viên. Hỗ trợ ăn trưa, Team building, ice cream, nhiều hoạt động khích lệ tinh thần làm việc
 												br
 												| Chế độ OT tốt, từ nhân viên đến TL đều được trả lương OT.
+						.vl-list_pagination.mt-4
+							ul.pagination
+								li.page-item.prev-page.disabled
+									a.page-link Quay lại
+								li.page-item.active
+									a.page-link 1
+								li.page-item
+									a.page-link 2
+								li.page-item
+									a.page-link 3
+								li.page-item.next-page
+									a.page-link Kế tiếp
 			.col-lg-4.pl-4-lg
 				.profile-title#danhgia Đánh giá
 				.profile-content.text-center.p-4.mt-3
-					form(action="javascript:void(0)", method="post")
+					form(action="javascript:", method="post")
 						p.mt-4
 							span Hiện chưa có đánh giá nào.
 							br
 							span Hãy là người đầu tiên đưa ra đánh giá
-						p
+						p.mt-2
 							input(
 								name="star"
 								data-role="rating"
@@ -134,7 +133,7 @@ block main
 								data-stared-color="cyan"
 								data-cls-stars="profile-stars"
 								)
-						p
+						p.mt-1
 							input(
 								name="title"
 								placeholder="Tiêu đề đánh giá"
@@ -143,26 +142,24 @@ block main
 							textarea.mt-3(
 								name="content"
 								placeholder="Nội dung đánh giá"
-								data-role="textarea"
-								cols="30"
-								rows="10"
+								rows="5"
 								)
 						p
 							button.ctvl-btn_ungtuyen.mx-auto Đánh giá ngay
 				.job.recommend.mt-8.mt-10-lg
-					h6.job-title.text-center.m-0.py-3 Đang tuyển dụng
+					h6.job-title.text-center.m-0.py-2 Đang tuyển dụng
 					ul.job-list2.px-2.pb-2
 						-for(var i = 0; i < 8; i++)
 							li
 								article.job-box
 									.img
-										a(href="#")
-											img(src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
+										a(href="profile-nha-tuyen-dung.html")
+											img.lazy(data-src="img/nha-tuyen-dung/aeon-mall.webp", alt="aeon-mall.webp")
 									.info
 										.job-box_title.text-bold
-											a(href="#") Accounting Officer (Aeonmall Tân Phú)
+											a(href="chi-tiet-1-viec-lam.html") Accounting Officer (Aeonmall Tân Phú)
 										.job-box_subtitle.text-small
-											a(href="#") AEONMALL Vietnam Co., Ltd
+											a(href="profile-nha-tuyen-dung.html") AEONMALL Vietnam Co., Ltd
 										.d-flex
 											.job-luong.text-small.text-bold Thương lượng
 											.job-diadiem.text-small.ml-4

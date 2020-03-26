@@ -5,7 +5,8 @@
 	"globalJs": [
 		"bower_components/jquery/dist/jquery.min.js",
 		"bower_components/metro/build/js/metro.min.js",
-		"bower_components/swiper/package/js/swiper.min.js"
+		"bower_components/swiper/package/js/swiper.min.js",
+		"bower_components/vanilla-lazyload/dist/lazyload.min.js"
 	],
 	"globalCss": [
 		"bower_components/metro/build/css/metro-all.min.css",
