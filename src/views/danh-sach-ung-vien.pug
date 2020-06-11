@@ -1,0 +1,119 @@
+extends _layout.pug
+
+block var
+	- var title = 'Danh sách ứng viên'
+
+block main
+	section.container
+		nav.breadcrumb.mt-4.mb-2
+			a.breadcrumb-step(href='index.html') Trang chủ
+			a.breadcrumb-step.breadcrumb-step_active(href='viec-lam.html') Danh sách ứng viên
+	section.vl-list_wrapper.container.mt-4
+		.row
+			.col-12.vl-form
+				include ../components/form-search/index.pug
+		.row
+			.col-lg-9.vl-sort.mt-6
+				h5.vl-sort_title.text-bold.m-0 Hồ sơ ứng viên
+					span.vl-sort_count.text-secondary.text-bold.ml-2 1,909
+				select.vl-sort_select.ml-auto(
+					data-role="select"
+					data-filter="false"
+					data-duration="0"
+					)
+					option Mức lương tăng dần
+					option Mức lương giảm dần
+		.row.flex-wrap-r.flex-wrap-lg
+			.col-lg-9
+				ul.vl-list.uv-list.mx-0
+					-for(var i = 0; i < 4; i++)
+						li
+							article.vl-list_box.job-box
+								.info
+									.job-box_title.text-bold
+										a(href="ho-so-ung-vien.html" title="Trợ Lý Nhân Sự - Admin") Trợ Lý Nhân Sự - Admin #{i}
+									.job-box_subtitle.text-small Nguyễn Hà Chinh
+									.d-inline-flex
+										.job-luong.text-bold.text-small(title="Kinh nghiệm") 2 năm
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Hồ Chí Minh
+										.badge-seen.text-small.py-0.ml-4 Đã xem
+								.action
+									a(href="#" title="Lưu hồ sơ").vl-list_btn--heart.hearted
+										span.mdi.mdi-heart-outline(title="Ngày chỉnh sửa")
+									.vl-list_posted.text-small
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 28/02/2020
+						li
+							article.vl-list_box.job-box
+								.info
+									.job-box_title.text-bold
+										a(href="ho-so-ung-vien.html" title="Trợ Lý Nhân Sự - Admin") Trợ Lý Nhân Sự - Admin
+									.job-box_subtitle.text-small Nguyễn Hà Chinh
+									.d-inline-flex
+										.job-luong.text-bold.text-small(title="Kinh nghiệm") Chưa có kinh nghiệm
+										.job-diadiem.text-small.ml-4(title="Địa điểm")
+											span.mdi.mdi-map-marker
+											span.ml-1 Hồ Chí Minh
+								.action
+									a(href="#" title="Lưu hồ sơ").vl-list_btn--heart
+										span.mdi.mdi-heart-outline(title="Ngày chỉnh sửa")
+									.vl-list_posted.text-small
+										span.mdi.mdi-clock-check-outline
+										span.ml-1 28/02/2020
+				.vl-list_info
+					span Hiển thị 1 đến 8 trong 8 ứng viên
+				.vl-list_pagination
+					ul.pagination
+						li.page-item.prev-page.disabled
+							a.page-link Quay lại
+						li.page-item.active
+							a.page-link 1
+						li.page-item
+							a.page-link 2
+						li.page-item
+							a.page-link 3
+						li.page-item.next-page.disabled
+							a.page-link Kế tiếp
+			.col-lg-3.mt-4.pl-4-lg
+				.profile-content.p-4
+					.h5.m-0 Ứng viên theo ngành nghề
+					.border-top.bd-gray.pt-1.mt-2
+						ul.dsnn-list.dsnn-list2.text-secondary.m-0
+							li
+								a(href="viec-lam.html") Tiếp thị / Marketing
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Tiếp thị trực tuyến
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Bán lẻ / bán sỉ
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Bán hàng / Kinh doanh 
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Tư vấn
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") An Ninh / Bảo Vệ
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Luật / Pháp lý
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Dịch vụ khách hàng
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Lao động phổ thông
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Bưu chính viễn thông
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Vận chuyển / Giao nhận /  Kho vận
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Phi chính phủ / Phi lợi nhuận
+								span.text-small.fg-red.text-bold.ml-1 (1.978)

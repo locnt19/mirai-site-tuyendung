@@ -158,8 +158,8 @@ function ResetFilterListViecLam() {
 function ViewMore() {
 	var dsnnListContainer = $('.dsnn-list2');
 	var dsnnListItem = $('.dsnn-list2 li');
-	ViewMore_Items('hide', dsnnListItem, 4, dsnnListItem.length);
-	ViewMore_HandlerEvent(dsnnListContainer, dsnnListItem, 4);
+	ViewMore_Items('hide', dsnnListItem, 6, dsnnListItem.length);
+	ViewMore_HandlerEvent(dsnnListContainer, dsnnListItem, 6);
 
 	var vlTreeListDiaDiemContainer = $('.vl-tree_list.dia-diem');
 	var vlTreeListDiaDiemItem = $('.vl-tree_list.dia-diem li');

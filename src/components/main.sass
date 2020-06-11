@@ -17,11 +17,12 @@ a
 main
 	padding-top: 50px
 	min-height: 90vh
+	margin-bottom: 16px
 ul
 	list-style: none
 img:not([src])
 	visibility: hidden
-/* Fixes Firefox anomaly during image load */
+	/* Fixes Firefox anomaly during image load */
 @-moz-document url-prefix()
 	img:-moz-loading
 		visibility: hidden
@@ -97,7 +98,7 @@ img:not([src])
 					transform: translate(-50%, -50%)
 			&.open
 				span::before
-					content: '\FB87'
+					content: '\F0BAB'
 		&_link
 			// margin-top: 16px
 			padding: 0 14px
@@ -190,10 +191,9 @@ img:not([src])
 				&.login
 					a
 						color: #fff !important
-						opacity: .85
-						background: #1877F2 !important
+						background: #00aff0 !important
 						&:hover
-							opacity: 1
+							background: #002660 !important
 				&.language
 					a
 						padding-right: 0
@@ -253,7 +253,7 @@ img:not([src])
 				border-radius: 0
 				width: 100%
 				&::before
-					content: '\F142'
+					content: '\F0142'
 					display: inline-block
 					font-family: 'Material Design Icons'
 					font-size: inherit
@@ -388,7 +388,7 @@ img:not([src])
 		justify-content: center
 		img
 			width: 100%
-			min-height: 250px
+			// min-height: 250px
 	// text
 	.banner-container
 		z-index: 2
@@ -678,7 +678,7 @@ img:not([src])
 			position: absolute
 			top: 2px
 			right: 0
-			content: '\F054'
+			content: '\F0054'
 			display: inline-block
 			font-family: 'Material Design Icons'
 			font-size: inherit
@@ -735,6 +735,7 @@ img:not([src])
 		&_select
 			margin-top: 8px
 			flex: 0 0 100%
+			margin-left: auto
 			a
 				padding: 0 12px !important
 		&_btn--newest
@@ -765,10 +766,14 @@ img:not([src])
 			width: 24px
 			height: 24px
 			text-align: center
+			&.hearted
+				.mdi-heart-outline::before
+					color: lighten(red, 10)
+					content: '\F02D1'
 			&:hover
 				span::before
 					color: lighten(red, 10)
-					content: '\F2D1'
+					content: '\F02D1'
 		&_posted
 			color: darken(silver, 30)
 		&_info
@@ -801,7 +806,7 @@ img:not([src])
 			&.active-toggle
 				span:nth-child(2)
 					&::before
-						content: '\F374'
+						content: '\F0374'
 		&_btn
 			&--removeFilter
 				display: none
@@ -820,7 +825,7 @@ img:not([src])
 					padding-left: 20px
 					font-size: 14px
 					&::before
-						content: '\F450'
+						content: '\F0450'
 						display: inline-block
 						font-family: 'Material Design Icons'
 						font-size: inherit
@@ -900,7 +905,6 @@ img:not([src])
 				margin-top: 0
 				flex: 0 0 auto
 				width: auto
-				margin-left: 12px
 		&-list
 			&_btn--heart
 				position: absolute
@@ -912,6 +916,14 @@ img:not([src])
 				bottom: 8px
 				right: 8px
 
+.uv-list
+	.info
+		padding-left: 0
+.badge-seen
+	background: #007DC6
+	color: #fff !important
+	padding: 2px 8px
+	border-radius: 4px
 .ctvl
 	&-company
 		&_box
@@ -972,7 +984,7 @@ img:not([src])
 				background: #fff
 				border-color: #002660
 				.mdi::before
-					content: '\F2D1'
+					content: '\F02D1'
 					color: lighten(red, 10)
 	&-content
 		background: #fff
@@ -1082,22 +1094,21 @@ img:not([src])
 			overflow-y: auto
 	&-user
 		&_box
+			word-break: break-all
+			p:first-of-type
+				margin-top: 0
 			&:hover
 				@media screen and ( min-width: 768px )
 					.profile-user_btn--edit
 						opacity: 1
 						visibility: visible
 			&--img
-				flex: 0 0 64px
-				max-width: 64px
-				height: 64px
+				flex: 0 0 160px
+				max-width: 160px
+				height: 160px
 				img
 					width: 100%
 					height: 100%
-				@media screen and ( min-width: 768px )
-					flex: 0 0 150px
-					max-width: 150px
-					height: 150px
 		&_btn--edit
 			z-index: 1
 			width: 30px
@@ -1125,8 +1136,10 @@ img:not([src])
 		overflow: hidden
 		break-inside: avoid
 	&-list
+		li
+			padding: 4px 0
 		li::before
-			content: '\F142'
+			content: '\F0142'
 			display: inline-block
 			font-family: 'Material Design Icons'
 			font-size: inherit

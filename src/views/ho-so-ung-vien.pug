@@ -1,0 +1,241 @@
+extends _layout.pug
+
+block var
+	- var title = 'Hồ sơ ứng viên'
+
+block main
+	section.container
+		nav.breadcrumb.mt-4.mb-4
+			a.breadcrumb-step(href='index.html') Trang chủ
+			a.breadcrumb-step(href='danh-sach-ung-vien.html') Ứng viên
+			a.breadcrumb-step.breadcrumb-step_active(href='#') Hồ sơ ứng viên
+	section.profile-user_wrapper.container
+		.row.flex-align-start
+			.col-lg-9
+				.profile-user_box.bg-white.border.border-left-none.bd-gray.mb-4
+					.d-flex.flex-column.flex-row-md.flex-align-center.flex-align-start-md.border-left.border-size-5.bd-blue.p-4
+						.profile-user_box--img.border.bd-gray.p-1.p-2-md.ml-2-md
+							img.lazy(data-src="https://via.placeholder.com/150" alt="avatar")
+						.mt-4.mt-0-md.ml-6-md
+							.h6.text-bold.fg-blue.mt-0.mb-2 Nguyễn Hồ Bảo Thành
+							.mt-2-md.text-secondary
+								p.mt-0
+									//- span.mdi.mdi-label-outline.fg-blue
+									span.mdi.mdi-pound.fg-blue
+									span.ml-2 Nhân Viên Hành Chính Nhân Sự
+								//- p.mt-0
+								//- 	span.mdi.mdi-email-outline.fg-blue
+								//- 	span.ml-2 nguyenhobaothanh@gmail.com
+								p.mt-0
+									span.mdi.mdi-calendar-month-outline.fg-blue
+									span.ml-2 19/09/1998
+								//- p.mt-0
+								//- 	span.mdi.mdi-phone-outline.fg-blue
+								//- 	span.ml-2 0123456789
+								p.mt-0
+									span.mdi.mdi-map-marker-outline.fg-blue
+									span.ml-2 Ấp Thành Công, Xã Vĩnh Thanh, Huyện Nhơn Trạch, Tỉnh Đồng Nai
+								p.mt-0
+									span.mdi.mdi-gender-male-female.fg-blue
+									span.ml-2 Nam
+								p
+									a(href="#luu-ho-so").border.border-radius.bd-gray.bd-blue-hover.fg-blue-hover.px-6.py-2
+										span.mdi.mdi-heart-outline
+										span.ml-1 Lưu hồ sơ
+									a(href="javascript:void(0)" onclick="$('#thongtinungvien').data('infobox').open()").fg-white.bg-blue.border.border-radius.bd-blue.ml-2.px-6.py-2
+										span.ml-1 Xem liên hệ
+				.profile-user_box.bg-white.border.bd-gray.my-4
+					.h6.border-bottom.bd-gray.bg-blue.fg-white.m-0.px-4.py-2
+						span.mdi.mdi-account
+						span.ml-2 Thông tin hồ sơ
+					.p-4.text-secondary
+						.row
+							.col-6
+								.text-bold Ngành nghề
+								div
+									a(href="#").badge-seen.mr-1 Hành chính - Văn phòng
+									a(href="#").badge-seen.mr-1 Nhân sự
+							.col-6
+								.text-bold Trình độ học vấn
+								div Cử nhân
+							.col-6
+								.text-bold Loại hình công việc
+								div Toàn thời gian cố định
+							.col-6
+								.text-bold Mức lương mong muốn
+								.fg-red 10 triệu - 12 triệu
+							.col-6
+								.text-bold Kinh nghiệm
+								.fg-red 6 năm
+							.col-6
+								.text-bold Nơi làm việc
+								div
+									a(href="#").badge-seen.fg-white.mr-1 Đồng Nai
+							.col-6
+								.text-bold Quận / huyện
+								div Nhơn Trạch
+							.col-6
+								.text-bold Thành phố / tỉnh
+								div Nhơn Trạch, Đồng Nai
+							.col-6
+								.text-bold Mã hồ sơ
+								div 1923080
+							.col-6
+								.text-bold Số lượt xem
+								div 99
+							.col-6
+								.text-bold Ngày cập nhật
+								div 27/04/2020
+				.profile-user_box.bg-white.border.bd-gray.my-4
+					.h6.border-bottom.bd-gray.bg-blue.fg-white.m-0.px-4.py-2
+						span.mdi.mdi-format-list-bulleted
+						span.ml-2 Mục tiêu nghề nghiệp 
+					.p-4.text-secondary
+						p - Trở thành một nhân sự đầy kinh nghiệm cũng như một nhân viên tận tụy ,cống hiến hết mình cho công ty.
+						p - Mong muốn tìm được chỗ làm ổn định lâu dài.
+						p - Mong muốn tìm được chỗ làm có cơ hội thăng tiến tốt.
+						p - Mong muốn tìm được chỗ làm có mức lương tốt.
+						p - Mong muốn tìm được nơi có cơ hội cống hiến bản thân tốt.
+				.profile-user_box.bg-white.border.bd-gray.my-4
+					.h6.border-bottom.bd-gray.bg-blue.fg-white.m-0.px-4.py-2
+						span.mr-2.mdi.mdi-star
+						span Kinh nghiệm làm việc
+					.p-4
+						.row.mb-2
+							.col-4.col-md-2.text-small 2018 - Đến nay
+							.col-8.col-md-10
+								.text-bold Senior Software Engineer, NCT Corporation
+								.text-secondary
+									p.mt-0 nhaccuatui.com (https://nhaccuatui.com): nhaccuatui.com is one of the largest Vietnamese music on demand services, which runs on multiple platforms like Web, Android, iOS, Smart TV, WAP, Window Phone, Windows with over millions of views per day and average concurrent user on all types of device is over 30000.
+						.row.mb-2
+							.col-4.col-md-2.text-small 2016-2018
+							.col-8.col-md-10
+								.text-bold Engineering Manager, ShopBack
+								.text-secondary
+									p.mt-0 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, ducimus minus! Aliquid, maiores ex reprehenderit dolore vero animi deserunt blanditiis, accusantium illo ea culpa, voluptatum ducimus pariatur placeat libero nesciunt.
+				.profile-user_box.bg-white.border.bd-gray.my-4
+					.h6.border-bottom.bd-gray.bg-blue.fg-white.m-0.px-4.py-2
+						span.mr-2.mdi.mdi-book-open-page-variant
+						span  Học vấn / bằng cấp
+					.p-4
+						.row.mb-2
+							.col-4.col-md-2.text-small 09/2016 - 09/2019
+							.col-8.col-md-10
+								.text-bold Cao Thang Technical College
+								.text-secondary
+									p.mt-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur odit ratione enim debitis eos provident illum optio expedita, eligendi itaque, dicta vero, reprehenderit nam totam quas unde minima voluptate vel.
+				//- .profile-user_box.bg-white.border.bd-gray.my-4
+					.h6.border-bottom.bd-gray.bg-blue.fg-white.m-0.px-4.py-2
+						span.mr-2.mdi.mdi-near-me
+						span Liên hệ
+					.p-4.text-secondary
+						.row
+							.col-4.col-md-2.text-bold Họ tên:
+							.col-8.col-md-10 Nguyễn Hồ Bảo Thành
+							.col-4.col-md-2.text-bold Địa chỉ:
+							.col-8.col-md-10 Ấp Thành Công, Xã Vĩnh Thanh, Huyện Nhơn Trạch, Tỉnh Đồng Nai
+							.col-12.text-center.mt-4
+								a(href="#luu-ho-so").border.border-radius.bd-gray.bd-blue-hover.fg-blue-hover.px-6.py-2
+									span.mdi.mdi-heart-outline
+									span.ml-1 Lưu hồ sơ
+								a(href="javascript:void(0)" onclick="$('#thongtinungvien').data('infobox').open()").fg-white.bg-blue.border.border-radius.bd-blue.ml-2.px-6.py-2
+									span.ml-1 Xem liên hệ
+			.col-lg-3(style="position: sticky; top: 60px;")
+				.profile-user_box.bg-white.border.bd-gray.mb-4.p-4.text-secondary.text-center
+					a(href="#luu-ho-so").d-inline-block.border.border-radius.bd-gray.bd-blue-hover.fg-blue-hover.m-1.px-6.py-2
+						span.mdi.mdi-heart-outline
+						span.ml-1 Lưu hồ sơ
+					a(href="javascript:void(0)" onclick="$('#thongtinungvien').data('infobox').open()").fg-white.bg-blue.d-inline-block.border.border-radius.bd-blue.m-1.px-6.py-2
+						span.ml-1 Xem liên hệ
+				section#thongtinungvien.thongtinungvien.login-infobox_wrapper(data-role="infobox")
+					.login-close.button.square.closer
+					.p-4
+						.h3 Thông tin ứng viên
+						.h6.text-bold.fg-blue.mt-0.mb-2 Nguyễn Hồ Bảo Thành
+						.mt-2-md.text-secondary
+							p.mt-0
+								span.mdi.mdi-label-outline.fg-blue
+								span.ml-2 Nhân Viên Hành Chính Nhân Sự
+							p.mt-0
+								span.mdi.mdi-email-outline.fg-blue
+								span.ml-2 nguyenhobaothanh@gmail.com
+							p.mt-0
+								span.mdi.mdi-calendar-month-outline.fg-blue
+								span.ml-2 19/09/1998
+							p.mt-0
+								span.mdi.mdi-phone-outline.fg-blue
+								span.ml-2 0123456789
+							p.mt-0
+								span.mdi.mdi-map-marker-outline.fg-blue
+								span.ml-2 Ấp Thành Công, Xã Vĩnh Thanh, Huyện Nhơn Trạch, Tỉnh Đồng Nai
+							p.mt-0
+								span.mdi.mdi-gender-male-female.fg-blue
+								span.ml-2 Nam
+				.profile-user_box.bg-white.border.bd-gray.my-4.p-4
+					.h5.m-0 Ứng viên theo ngành nghề
+					.border-top.bd-gray.pt-1.mt-2
+						ul.dsnn-list.dsnn-list2.text-secondary.m-0
+							li
+								a(href="viec-lam.html") Tiếp thị / Marketing
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Tiếp thị trực tuyến
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Bán lẻ / bán sỉ
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Bán hàng / Kinh doanh 
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Tư vấn
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") An Ninh / Bảo Vệ
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Luật / Pháp lý
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Dịch vụ khách hàng
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Lao động phổ thông
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Bưu chính viễn thông
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Vận chuyển / Giao nhận /  Kho vận
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+							li
+								a(href="viec-lam.html") Phi chính phủ / Phi lợi nhuận
+								span.text-small.fg-red.text-bold.ml-1 (1.978)
+		.row
+			.col-12
+				.profile-user_box.bg-white.border.bd-gray.my-4
+					.h6.border-bottom.bd-gray.bg-blue.fg-white.m-0.px-4.py-2
+						span.mr-2.mdi.mdi-chevron-right
+						span Ứng viên liên quan
+					ul.d-flex.flex-wrap.p-4.m-0
+						-for(var i = 0; i < 9; i++)
+							li.col-md-6.col-xl-4.px-2.py-0
+								article.vl-list_box.job-box
+									.img
+										a(href="profile-nha-tuyen-dung.html")
+											img.lazy(data-src="https://via.placeholder.com/64" alt="64.png")
+									.info
+										.job-box_title.text-bold
+											a(href="ho-so-ung-vien.html" title="Trợ Lý Nhân Sự - Admin") Trợ Lý Nhân Sự - Admin #{i}
+										.job-box_subtitle.text-small Nguyễn Hà Chinh
+										.d-inline-flex
+											.job-luong.text-bold.text-small(title="Kinh nghiệm") Chưa có kinh nghiệm
+											.job-diadiem.text-small.ml-4(title="Địa điểm")
+												span.mdi.mdi-map-marker
+												span.ml-1 Hồ Chí Minh
+									.action
+										a(href="#" title="Lưu hồ sơ").vl-list_btn--heart
+											span.mdi.mdi-heart-outline(title="Ngày chỉnh sửa")
+										.vl-list_posted.text-small.d-none-md.d-block-lg
+											span.mdi.mdi-clock-check-outline
+											span.ml-1 28/02/2020
